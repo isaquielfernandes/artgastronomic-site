@@ -1,14 +1,13 @@
 import Link from "next/link";
-import "./offcanvas";
 
 const Navigation = () => (
     <header>
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
             <Link href="/">     
-                <a className="navbar-brand" href="index.html">
-                <img src="img/logo/logo.jpeg" width={30} height={30} className="d-inline-block
-                align-top" alt="logo" loading="lazy" />
-                Art Gastronomic
+                <a className="navbar-brand">
+                    <img src="img/logo/logo.jpeg" width={30} height={30} className="mr-1 d-inline-block
+                    align-top" alt="logo" loading="lazy" />
+                    ArtGastronomic
                 </a>
             </Link>
             <button className="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +17,7 @@ const Navigation = () => (
             <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                     <Link href="/index">
-                        <a className="nav-link" href="index.html">Home</a>
+                        <a className="nav-link">Home</a>
                     </Link>
                 </li>
                 <li className="nav-item">

@@ -13,18 +13,20 @@ const  Post = (props) => {
                     </header>
                     </div>
                     <div className="card-body p-2">
-                        <div className="card-group">
+                        <div className="card-group grid">
                             { props.posts.map((p) => (
-                            <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4 p-2 mb-0 `{p.fields.categoria}`" key={p.sys.id}>
-                                <div className="card img-container">
-                                    <img src={p.fields.image.fields.file.url} className="card-img-top img-fluid" alt="receita-img" />
-                                    <button type="button" className="btn-ver-receita" data-id={p.sys.id} data-toggle="modal" data-target="">
-                                            Ver Receita <i className="fa fa-cutlery" aria-hidden="true"></i>
-                                    </button>
-                                    <div className="card-header p-2">
-                                        <h5 className="card-title mt-1">{p.fields.nome}</h5>
+                            <div id={p.fields.categoria} className="col-xs-12 col-sm-6 col-md-4 col-lg-4 p-2 mb-0 grid-item " key={p.sys.id}>
+                                <article className={p.fields.categoria}>
+                                    <div className="card img-container">
+                                        <img src={p.fields.image.fields.file.url} className="card-img-top img-fluid" alt="receita-img" />
+                                        <button type="button" className="btn-ver-receita" data-id={p.sys.id} data-toggle="modal" data-target="">
+                                                Ver Receita <i className="fa fa-cutlery" aria-hidden="true"></i>
+                                        </button>
+                                        <div className="card-header p-2">
+                                            <h5 className="card-title mt-1">{p.fields.nome}</h5>
+                                        </div>
                                     </div>
-                                </div>
+                                </article>
                             </div>
                             ))}
                         </div>
@@ -61,29 +63,29 @@ const  Post = (props) => {
                     list-group-flush">
                         <a href="#" data-filter="*" className="list-group-item
                         list-group-item-action p-1 active" aria-selected="true">Todos</a>
-                        <a href="#" data-filter=".peixe" className="list-group-item
+                        <a href="#" data-filter="#peixe" className="list-group-item
                         list-group-item-action p-1" aria-selected="false">Peixe</a>
-                        <a href="#" data-filter=".carne" className="list-group-item
+                        <a href="#" data-filter="#carne" className="list-group-item
                         list-group-item-action p-1" aria-selected="false">Carne</a>
-                        <a href="#" data-filter=".entradas-petiscos" className="list-group-item list-group-item-action p-1" aria-selected="false">Entradas &amp; Petiscos</a>
-                        <a href="#" data-filter=".polvo-lulas-chocos" className="list-group-item list-group-item-action p-1" aria-selected="false">Polvo, Lulas &amp; Chocos</a>
-                        <a href="#" data-filter=".sobremesas-doces" className="list-group-item list-group-item-action p-1" aria-selected="false">Sobremesas &amp; Doces</a>
-                        <a href="#" data-filter=".vegetarianos" className="list-group-item list-group-item-action p-1" aria-selected="false">Vegetarianos</a>
-                        <a href="#" data-filter=".vegan" className="list-group-item
+                        <a href="#" data-filter="#entradas-petiscos" className="list-group-item list-group-item-action p-1" aria-selected="false">Entradas &amp; Petiscos</a>
+                        <a href="#" data-filter="#polvo-lulas-chocos" className="list-group-item list-group-item-action p-1" aria-selected="false">Polvo, Lulas &amp; Chocos</a>
+                        <a href="#" data-filter="#sobremesas-doces" className="list-group-item list-group-item-action p-1" aria-selected="false">Sobremesas &amp; Doces</a>
+                        <a href="#" data-filter="#vegetarianos" className="list-group-item list-group-item-action p-1" aria-selected="false">Vegetarianos</a>
+                        <a href="#" data-filter="#vegan" className="list-group-item
                         list-group-item-action p-1" aria-selected="false">Vegan</a>
-                        <a href="#" data-filter=".sopas" className="list-group-item
+                        <a href="#" data-filter="#sopas" className="list-group-item
                         list-group-item-action p-1" aria-selected="false">Sopas</a>
-                        <a href="#" data-filter=".arroz" className="list-group-item
+                        <a href="#" data-filter="#arroz" className="list-group-item
                         list-group-item-action p-1" aria-selected="false">Arroz</a>
-                        <a href="#" data-filter=".massa-pizzas" className="list-group-item list-group-item-action p-1" aria-selected="false">Massa &amp; Pizzas</a>
-                        <a href="#" data-filter=".paes" className="list-group-item
+                        <a href="#" data-filter="#massa-pizzas" className="list-group-item list-group-item-action p-1" aria-selected="false">Massa &amp; Pizzas</a>
+                        <a href="#" data-filter="#paes" className="list-group-item
                         list-group-item-action p-1" aria-selected="false">Pães</a>
-                        <a href="#" data-filter=".mariscos" className="list-group-item
+                        <a href="#" data-filter="#mariscos" className="list-group-item
                         list-group-item-action p-1" aria-selected="false">Mariscos
-                        </a><a href="#" data-filter=".internacional" className="list-group-item list-group-item-action p-1" aria-selected="false">Internacional</a>
-                        <a href="#" data-filter=".molhos" className="list-group-item
+                        </a><a href="#" data-filter="#internacional" className="list-group-item list-group-item-action p-1" aria-selected="false">Internacional</a>
+                        <a href="#" data-filter="#molhos" className="list-group-item
                         list-group-item-action p-1" aria-selected="false">Molhos</a>
-                        <a href="#" data-filter=".acompanhamentos" className="list-group-item list-group-item-action p-1" aria-selected="false">Acompanhamentos</a>
+                        <a href="#" data-filter="#acompanhamentos" className="list-group-item list-group-item-action p-1" aria-selected="false">Acompanhamentos</a>
                         </nav>
                     </div>
                     </div>
