@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Footer from "../components/Footer";
 import Post from '../components/Post'
-import { client, getReceitaPost } from '../lib/api'
+import { client, getAllReceitas } from '../lib/api'
 
 const  Index = (props) => (
     <div className="">
@@ -84,6 +84,7 @@ Index.getInitialProps = async (ctx) => {
   let dados = await client.getEntries({
     content_type: "receitaPost"
   });
+
   return {receitas: dados.items,};
 };
 

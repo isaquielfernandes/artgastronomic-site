@@ -30,9 +30,10 @@ export async function getOnePostByID(id) {
   return parsePostEntries(entries)[0]
 }
 
-export async function getReceitaPost() {
+export async function getAllReceitas() {
   let entries = await client.getEntries({
     content_type: "receitaPost"
   });
+  console.log(parsePostEntries(entries)[0])
   return  parsePostEntries(entries)[0]
 };
