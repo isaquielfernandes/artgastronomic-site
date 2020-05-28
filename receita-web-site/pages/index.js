@@ -3,8 +3,7 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Footer from "../components/Footer";
 import Post from '../components/Post'
-
-const contentful = require("contentful");
+import { client, getReceitaPost } from '../lib/api'
 
 const  Index = (props) => (
     <div className="">
@@ -80,13 +79,6 @@ const  Index = (props) => (
       `}</style>
     </div>
   );
-
-const client = contentful.createClient({
-    // This is the space ID. A space is like a project folder in Contentful terms
-    space: "dcugw5hovzo7",
-    // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
-    accessToken: "yMCnTzi1YDlxhXNk48g9bBA6vYOLOrR0tcJCUKpwoXc"
-});
 
 Index.getInitialProps = async (ctx) => {
   let dados = await client.getEntries({
