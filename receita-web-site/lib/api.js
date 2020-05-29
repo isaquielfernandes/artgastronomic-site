@@ -1,8 +1,10 @@
 import { createClient } from 'contentful';
+ {/**space: process.env.NEXT_CMS_CONTENTFUL_SPACE_ID,
+  accessToken: process.env.NEXT_CMS_CONTENTFUL_ACCESS_TOKEN, */}
 
 export const client = createClient({
-  space: process.env.NEXT_CMS_CONTENTFUL_SPACE_ID,
-  accessToken: process.env.NEXT_CMS_CONTENTFUL_ACCESS_TOKEN,
+  space: "dcugw5hovzo7",
+  accessToken: "yMCnTzi1YDlxhXNk48g9bBA6vYOLOrR0tcJCUKpwoXc",
 })
 
 
@@ -26,14 +28,12 @@ export async function getOnePostByID(id) {
     limit: 1,
     'sys.id[in]': id,
   })
-  console.log(parsePostEntries(entries)[0]);
-  return parsePostEntries(entries)[0]
+  return parsePostEntries(entries)
 }
 
 export async function getAllReceitas() {
   let entries = await client.getEntries({
     content_type: "receitaPost"
   });
-  console.log(parsePostEntries(entries)[0])
-  return  parsePostEntries(entries)[0]
+  return  parsePostEntries(entries)
 };
