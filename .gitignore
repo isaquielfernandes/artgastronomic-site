@@ -1,2 +1,3 @@
-receita-web-site\.next
-.env
+receita-web-site/.next
+receita-web-site/node_modules
+receita-web-site/.env
