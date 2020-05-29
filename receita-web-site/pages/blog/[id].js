@@ -13,7 +13,7 @@ const Receita = ( props ) => {
         return {receita: dado.items};
     };
 
-    const { post } = this.props.receita;
+    
     return (
         
         <div className="modal fade" id="post-receita" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
