@@ -1,3 +1,4 @@
 receita-web-site/.next
 receita-web-site/node_modules
 .env
+now.json
