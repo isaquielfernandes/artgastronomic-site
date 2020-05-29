@@ -4,7 +4,7 @@
       "NEXT_CMS_CONTENTFUL_ACCESS_TOKEN": "@next_cms_contentful_access_token"},
     "build": {
       "env": {
-        "NEXT_CMS_CONTENTFUL_SPACE_ID": "@next_contentful_space_id",
+        "NEXT_CMS_CONTENTFUL_SPACE_ID": "@next_cms_contentful_space_id",
         "NEXT_CMS_CONTENTFUL_ACCESS_TOKEN": "@next_cms_contentful_access_token"}
     }
   }
