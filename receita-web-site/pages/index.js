@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import Container from "../components/Container";
 import Head from 'next/head';
 import Footer from "../components/Footer";
@@ -5,6 +6,13 @@ import Post from '../components/Post'
 import { client } from '../lib/api'
 
 const  Index = (props) => (
+    
+   const [posts, setPosts] = useState([]);
+   const [loading, setLoading] = useState(false);
+   const [currentPage, setCurrentPage] = useState(1);
+   const [postsPerPage] = useState(9);
+
+
     <div className="">
       <Container>
           <Head>
@@ -79,11 +87,16 @@ const  Index = (props) => (
     </div>
   );
 
+useEffect(() => {
 Index.getInitialProps = async (ctx) => {
+  setLoading(true);
   let dados = await client.getEntries({
     content_type: "receitaPost"
   });
+  setPosts(dados.items);
   return {receitas: dados.items};
-};
+}; 
+ 
+}, []);
 
 export default Index;
