@@ -6,13 +6,6 @@ import Post from '../components/Post'
 import { client } from '../lib/api'
 
 const  Index = (props) => (
-    
-   const [posts, setPosts] = useState([]);
-   const [loading, setLoading] = useState(false);
-   const [currentPage, setCurrentPage] = useState(1);
-   const [postsPerPage] = useState(9);
-
-
     <div className="">
       <Container>
           <Head>
@@ -86,6 +79,11 @@ const  Index = (props) => (
       `}</style>
     </div>
   );
+
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(9);
 
 useEffect(() => {
 Index.getInitialProps = async (ctx) => {
