@@ -50,7 +50,7 @@ html, body {
   letter-spacing: var(--main-spacing);
   font-weight: bold;
   transition: var(--main-transition);
-  /*transform: translateX(101%);*/
+  transform: translateX(100%);
   cursor: pointer;
 }
 
