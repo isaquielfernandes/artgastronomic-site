@@ -18,11 +18,11 @@ const MainSection = (prosps) => (
                     <div className="card-footer">
                     <nav className="">
                         <ul className="container pagination justify-content-center">
-                        <li className="page-item ml-1"><a className="page-link bg-light text-dark" href="#">Anterior</a></li>
-                        <li className="page-item ml-1"><a className="page-link bg-light text-dark" href="#">1</a></li>
-                        <li className="page-item ml-1"><a className="page-link bg-light text-dark" href="#">2</a></li>
-                        <li className="page-item ml-1"><a className="page-link bg-light text-dark" href="#">3</a></li>
-                        <li className="page-item ml-1"><a className="page-link bg-light text-dark" href="#">Proxima</a></li>
+                        <li className="page-item ml-1"><a className="page-link bg-light text-dark" href="!#">Anterior</a></li>
+                        <li className="page-item ml-1"><a className="page-link bg-light text-dark" href="!#">1</a></li>
+                        <li className="page-item ml-1"><a className="page-link bg-light text-dark" href="!#">2</a></li>
+                        <li className="page-item ml-1"><a className="page-link bg-light text-dark" href="!#">3</a></li>
+                        <li className="page-item ml-1"><a className="page-link bg-light text-dark" href="!#">Proxima</a></li>
                         </ul>
                     </nav>
                     </div>
