@@ -85,12 +85,12 @@ Index.getInitialProps = async (ctx) => {
   if (ctx.query.page) {
     page = parseInt(ctx.query.page + '');
   }
-  let dados = await client.getEntries({
+  const { dados, total, skip, limit }  = await client.getEntries({
     content_type: "receitaPost",
     limit: 6,
     skip: (page - 1) * 6
   });
-  return {receitas: dados.items};
+  return {page, receitas: dados.items, total, skip, limit };
 };
 
 export default Index;
