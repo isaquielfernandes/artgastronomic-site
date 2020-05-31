@@ -1,96 +1,67 @@
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Container from "../components/Container";
 import Head from 'next/head';
 import Footer from "../components/Footer";
 import Post from '../components/Post'
 import { client } from '../lib/api'
+import Pagination from '../components/Pagination';
+import Paginator from '../components/Paginator';
 
-const  Index = (props) => (
-    <div className="">
-      <Container>
-          <Head>
-              <title>Home - Art Gastronomic</title>
-          </Head>
-          <div>
-             <Post posts = { props.receitas }/>
-          </div>
-      </Container>
-      
-      <Footer/>
+const calculateRange = (length) => Array.from({ length }, (v, k) => k + 1);
 
-      <style jsx>{`
+const  Index = (props) => {
 
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+  const router = useRouter();
+  const posts = props.receitas.length ? props.receitas : [];
+  const total = props.total;
+  const limit = props.limit;
+  const rangeLimit = Math.ceil(total / limit);
+  const range = calculateRange(rangeLimit);
 
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(!!props.page ? props.page : 1);
+  const [postsPerPage] = useState(limit);
 
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
+  useEffect(() => {
+    void router.push({ pathname: '/', query: { page: currentPage } });
+  }, [currentPage]);
 
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
+  //const paginate = pageNumber => setCurrentPage(pageNumber);
+  return (
+        <>
+          <Container>
+              <Head>
+                  <title>Home - Art Gastronomic</title>
+              </Head>
+              <div className="card-body p-2">
+                <Post posts = { posts } loading={ loading } />
+              </div>
+              <div className="card-footer">
+              <Paginator
+                   handlePaginationChange={(event) => setCurrentPage(event)}
+                   range={range}
+                   skip={currentPage}/>
+                {/*<Pagination skip={currentPage} postsPerPage={postsPerPage} totalPosts={total} paginate={paginate} />*/}
+              </div>
+          </Container>
+          
+          <Footer/>
+        </>
+  )
+};
 
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
-  );
-
-let page = 1;
-
-Index.getInitialProps = async (ctx) => {
-  if (ctx.query.page) {
-    page = parseInt(ctx.query.page + '');
+Index.getInitialProps = async ({ query }) => {
+  let page = 1;
+  if (query.page) {
+    page = parseInt(query.page + '');
   }
-  const { dados, total, skip, limit }  = await client.getEntries({
+  let dados = await client.getEntries({
     content_type: "receitaPost",
     limit: 6,
     skip: (page - 1) * 6
   });
-  return {page, receitas: dados.items, total, skip, limit };
+  return {page, receitas: dados.items, skip: dados.skip, total: dados.total, limit: dados.limit };
 };
 
 export default Index;

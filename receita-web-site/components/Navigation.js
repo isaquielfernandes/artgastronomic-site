@@ -11,7 +11,7 @@ const Navigation = () => (
                 </a>
             </Link>
             <button className="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon" />
+                 <span className="navbar-toggler-icon" />
             </button>
             <div className="navbar-collapse offcanvas-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">

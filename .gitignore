@@ -1,5 +1,6 @@
 receita-web-site/.next
 receita-web-site/node_modules
+node_modules
 .env
 now.json
 next.config.js

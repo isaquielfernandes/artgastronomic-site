@@ -120,6 +120,10 @@ p .btn-group .btn-secondary {
   max-height: 586px;
 }
 
+.nav-cat {
+  display: none;
+}
+
 /* Footer */
 .footer-section {
   padding: 2.5rem 0;

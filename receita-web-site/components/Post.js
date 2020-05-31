@@ -2,11 +2,20 @@ import Router from 'next/router';
 import Link from 'next/link';
 import { client } from '../lib/api';
 
-const  Post = (props) => {
+const  Post = ({ posts, loading }) => {
+
+    if(loading){
+        return (
+            <div className="d-flex align-items-center">
+                <strong>Loading...</strong>
+                <div className="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+            </div>
+        )
+    }
    
     return (
         <div className="card-group grid">
-            { props.posts.map((p) => (
+            { posts.map((p) => (
                 <article id={p.fields.categoria} className="col-sm-6 col-md-4 col-lg-4 p-2 mb-0 grid-item " key={p.sys.id}>
                    <div className="card img-container">
                         <img src={p.fields.image.fields.file.url} className="card-img-top img-fluid" alt="receita-img" />

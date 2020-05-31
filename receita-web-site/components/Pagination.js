@@ -1,4 +1,4 @@
-import React, { FunctionComponent, Fragment, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 const Pagination = ({ skip, postsPerPage, totalPosts, paginate }) => {
@@ -17,19 +17,17 @@ const Pagination = ({ skip, postsPerPage, totalPosts, paginate }) => {
 
   const moveToNextPage = () => {
     if (page > 1) {
-      paginate(page - 1);
-      return setPageNumber(page - 1);
+      paginate(page + 1);
+      return setPageNumber(page + 1);
     }
-
     return null;
   };
 
   const moveToPreviousPage = () => {
     if (page < (pageNumbers.length - 1)) {
-      paginate(page + 1);
-      return setPageNumber(page + 1);
+      paginate(page - 1);
+      return setPageNumber(page - 1);
     }
-
     return null;
   };
 
@@ -38,23 +36,23 @@ const Pagination = ({ skip, postsPerPage, totalPosts, paginate }) => {
       <ul className='container pagination justify-content-center'>
          {pageNumbers.length > 1 ? (
          <li className="page-item ml-1">
-             <a onClick={() => moveToPreviousPage()} className="page-link bg-light text-dark" href="!#">
+             <button onClick={() => moveToPreviousPage()} className="page-link">
                Anterior
-             </a>
+             </button>
          </li>
          ): null}
          {pageNumbers.map(number => (
-          <li className="page-item ml-1">
-             <a onClick={() => paginate(number)} className="page-link bg-light text-dark" href="!#">
+          <li key={number} className="page-item ml-1">
+             <button onClick={() => paginate(number)} className="page-link">
                {number}
-             </a>
+             </button>
           </li>
          ))}
          {pageNumbers.length > 1 ? (
          <li className="page-item ml-1">
-             <a onClick={() => moveToNextPage()} className="page-link bg-light text-dark" href="!#">
+             <button onClick={() => moveToNextPage()} className="page-link">
                Próximo
-             </a>
+             </button>
           </li>
          ): null}
       </ul>
