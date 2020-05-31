@@ -81,7 +81,8 @@ const  Index = (props) => (
 
 Index.getInitialProps = async (ctx) => {
   let dados = await client.getEntries({
-    content_type: "receitaPost"
+    content_type: "receitaPost",
+    limit: 6
   });
   return {receitas: dados.items};
 };
