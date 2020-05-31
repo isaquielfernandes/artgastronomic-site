@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import Container from "../components/Container";
 import Head from 'next/head';
 import Footer from "../components/Footer";
@@ -80,10 +81,20 @@ const  Index = (props) => (
   );
 
 Index.getInitialProps = async (ctx) => {
-  let dados = await client.getEntries({
-    content_type: "receitaPost"
+   
+  let page = 1;
+
+  if (ctx.query.page) {
+    page = parseInt(ctx.query.page + '');
+  }
+
+  const { dados, total, skip, limit }  = await client.getEntries({
+    content_type: "receitaPost",
+    skip: (page - 1) * 6,
+    limit: 6
   });
-  return {receitas: dados.items};
-};
+
+  return {receitas: dados.items, page, total, skip, limit};
+}; 
 
 export default Index;
