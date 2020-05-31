@@ -93,15 +93,11 @@ Index.getInitialProps = async (ctx) => {
     page = parseInt(ctx.query.page + '');
   }
 
-  setLoading(true);
-
   const { dados, total, skip, limit }  = await client.getEntries({
     content_type: "receitaPost",
-    skip: (page - 1) * postsPerPage,
-    limit: postsPerPage
+    skip: (page - 1) * 6,
+    limit: 6
   });
-
-  setPosts(dados.items);
 
   return {receitas: dados.items, page, total, skip, limit};
 }; 
