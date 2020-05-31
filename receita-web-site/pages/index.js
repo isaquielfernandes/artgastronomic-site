@@ -79,10 +79,13 @@ const  Index = (props) => (
     </div>
   );
 
+let page = 1;
+
 Index.getInitialProps = async (ctx) => {
   let dados = await client.getEntries({
     content_type: "receitaPost",
-    limit: 6
+    limit: 6,
+    skip: (page - 1) * 6
   });
   return {receitas: dados.items};
 };
