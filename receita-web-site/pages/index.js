@@ -79,7 +79,7 @@ const  Index = (props) => (
     </div>
   );
 
-let page = 1;
+let page = 2;
 
 Index.getInitialProps = async (ctx) => {
   let dados = await client.getEntries({
