@@ -79,9 +79,12 @@ const  Index = (props) => (
     </div>
   );
 
-let page = 2;
+let page = 1;
 
 Index.getInitialProps = async (ctx) => {
+  if (ctx.query.page) {
+    page = parseInt(ctx.query.page + '');
+  }
   let dados = await client.getEntries({
     content_type: "receitaPost",
     limit: 6,
