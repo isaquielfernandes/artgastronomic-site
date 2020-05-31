@@ -80,21 +80,30 @@ const  Index = (props) => (
     </div>
   );
 
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(9);
+const [posts, setPosts] = useState([]);
+const [loading, setLoading] = useState(false);
+const [currentPage, setCurrentPage] = useState(1);
+const [postsPerPage] = useState(9);
 
-useEffect(() => {
 Index.getInitialProps = async (ctx) => {
+   
+  let page = 1;
+
+  if (ctx.query.page) {
+    page = parseInt(ctx.query.page + '');
+  }
+
   setLoading(true);
-  let dados = await client.getEntries({
-    content_type: "receitaPost"
+
+  const { dados, total, skip, limit }  = await client.getEntries({
+    content_type: "receitaPost",
+    skip: (page - 1) * postsPerPage,
+    limit: postsPerPage
   });
+
   setPosts(dados.items);
-  return {receitas: dados.items};
+
+  return {receitas: dados.items, page, total, skip, limit};
 }; 
- 
-}, []);
 
 export default Index;
