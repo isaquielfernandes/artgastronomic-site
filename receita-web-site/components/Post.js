@@ -19,9 +19,9 @@ const  Post = ({ posts, loading }) => {
                 <article id={p.fields.categoria} className="col-sm-6 col-md-4 col-lg-4 p-2 mb-0 grid-item " key={p.sys.id}>
                    <div className="card img-container">
                         <img src={p.fields.image.fields.file.url} className="card-img-top img-fluid" alt="receita-img" />
-                        <Link as={`/blog/${p.sys.id}`} href="/blog/[id]" className="rounded-left btn-ver-receita" >
+                        <button className="rounded-left btn-ver-receita" >
                                  Ver Receita <i className="fa fa-cutlery" aria-hidden="true"></i>
-                        </Link>
+                        </button>
                         <div className="card-header p-2">
                              <h5 className="card-title mt-1 text-truncate">{p.fields.nome}</h5>
                         </div>
