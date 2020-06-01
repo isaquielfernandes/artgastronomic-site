@@ -31,7 +31,7 @@ const MainSection = (prosps) => (
                         </div>
                     </section>
                 </div>{/* receita post end */}
-                <div className="col-sm-12 col-md-12 col-lg-3 mb-2">
+                <div className="col-sm-12 col-md-12 col-lg-3 mb-2 float-sm-left">
                     <section id="categoria-section" className="categoria-section">
                         <div id="categorias" className="card">
                             <div id="categoria-header" className="card-header">
@@ -45,7 +45,7 @@ const MainSection = (prosps) => (
                             </div>
                             <div className="collapse show categoria" id="collapseCategoria" aria-labelledby="categoria-header" data-parent="#categoria-section">
                             <div className="card-body p-2">
-                                <nav className="receitaFilter clearfix list-group list-group-flush">
+                                <nav className="receitaFilter clearfix list-group list-group-flush ">
                                     <a href="#" data-filter="*" className="list-group-item
                                     list-group-item-action p-1 active" aria-selected="true">Todos</a>
                                     <a href="#" data-filter="#peixe" className="list-group-item

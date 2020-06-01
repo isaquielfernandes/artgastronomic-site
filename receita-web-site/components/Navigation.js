@@ -5,7 +5,7 @@ const Navigation = () => (
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
             <Link href="/">     
                 <a className="navbar-brand">
-                    <img src="img/logo/logo.jpeg" width={30} height={30} className="mr-1 d-inline-block
+                    <img src="img/logo/logo.jpeg" width={30} height={30} className="rounded mr-1 d-inline-block
                     align-top" alt="logo" loading="lazy" />
                     ArtGastronomic
                 </a>

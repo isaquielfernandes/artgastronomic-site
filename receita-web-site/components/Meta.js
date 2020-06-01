@@ -37,11 +37,11 @@ const Meta = () => (
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossOrigin="anonymous"></script>
             <script src="/js/offcanvas.js"></script>
             <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-            <script src="/js/masonry.js"></script>
-            <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+            <script src="/js/mason.js"></script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
             <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.js"></script>
             <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-            
         </Head>
 );
 

@@ -1,17 +1,21 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import $ from 'jquery';
 import Container from "../components/Container";
 import Head from 'next/head';
 import Footer from "../components/Footer";
-import Post from '../components/Post'
-import { client } from '../lib/api'
+import Post from '../components/Post';
+import { client } from '../lib/api';
+import ReactPaginate from 'react-paginate';
 import Pagination from '../components/Pagination';
 import Paginator from '../components/Paginator';
+import PaginationRounded from '../components/PaginationRounded';
 
 const calculateRange = (length) => Array.from({ length }, (v, k) => k + 1);
 
 const  Index = (props) => {
 
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
   const posts = props.receitas.length ? props.receitas : [];
   const total = props.total;
@@ -19,7 +23,7 @@ const  Index = (props) => {
   const rangeLimit = Math.ceil(total / limit);
   const range = calculateRange(rangeLimit);
 
-  const [loading, setLoading] = useState(false);
+  
   const [currentPage, setCurrentPage] = useState(!!props.page ? props.page : 1);
   const [postsPerPage] = useState(limit);
 
@@ -38,10 +42,10 @@ const  Index = (props) => {
                 <Post posts = { posts } loading={ loading } />
               </div>
               <div className="card-footer">
-              <Paginator
-                   handlePaginationChange={(event) => setCurrentPage(event)}
-                   range={range}
-                   skip={currentPage}/>
+                <Paginator
+                    handlePaginationChange={(event) => setCurrentPage(event)}
+                    range={range}
+                    skip={currentPage}/>
                 {/*<Pagination skip={currentPage} postsPerPage={postsPerPage} totalPosts={total} paginate={paginate} />*/}
               </div>
           </Container>

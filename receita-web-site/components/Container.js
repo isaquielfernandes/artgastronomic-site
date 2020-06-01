@@ -6,7 +6,7 @@ import Meta from "./Meta";
 import MainSection from "./MainSection";
 
 const Container = (prosps) => (
-    <div>
+    <>
         <Meta/>
         <Navigation/>
         <Banner/>
@@ -15,7 +15,7 @@ const Container = (prosps) => (
         </MainSection>
         <Album/>
         <Contacto/>
-    </div>
+    </>
 );
 
 export default Container;

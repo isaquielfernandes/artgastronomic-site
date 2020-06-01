@@ -33,12 +33,12 @@ const Paginator = ( { skip, range, handlePaginationChange }) => {
   };
 
   const renderPageIndicators = (num, index) => (
-    <li className="page-item ml-1">
+    <li key={index} className="page-item ml-1">
       <button
-        className={`page-link ${
-          num === page ? 'paginator__page-number--selected' : ''
+        className={`page-link bg-light text-dark border-info ${
+          num === page ? 'active' : ''
         }`}
-        key={index}
+        
         onClick={() => moveToPage(num)}
       >
         {num}
@@ -51,7 +51,7 @@ const Paginator = ( { skip, range, handlePaginationChange }) => {
       <div className="container pagination justify-content-center">
         {range.length > 1 ? (
           <li className="page-item ml-1">
-            <button className="page-link" onClick={moveToNextPage}>
+            <button className="page-link bg-light text-dark border-info" onClick={moveToNextPage}>
               <span className="paginator__button__label"> Anterior </span>
             </button>
           </li>
@@ -61,7 +61,7 @@ const Paginator = ( { skip, range, handlePaginationChange }) => {
 
         {range.length > 1 ? (
           <li className="page-item ml-1">
-            <button className="page-link" onClick={moveToPreviousPage}>
+            <button className="page-link bg-light text-dark border-info" onClick={moveToPreviousPage}>
               <span className="paginator__button__label"> Proximo</span>
             </button>
           </li>

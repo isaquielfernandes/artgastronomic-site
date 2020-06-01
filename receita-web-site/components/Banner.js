@@ -10,7 +10,7 @@ const Banner = () => (
                     <p className="lead">
                     </p>
                     <div className="btn-group" role="group">
-                        <a className="btn btn-secondary" href="https://youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" role="button" target="_blank"><i className="mr-2 fa fa-youtube-play" aria-hidden="true" /> Inscreva-se</a>
+                        <a className="btn btn-secondary text-uppercase" href="https://youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" role="button" target="_blank"><i className="mr-2 fa fa-youtube-play" aria-hidden="true" /> Inscreva-se</a>
                     </div>
                     <p />
                 </div>
