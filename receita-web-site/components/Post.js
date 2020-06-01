@@ -19,7 +19,7 @@ const  Post = ({ posts, loading }) => {
                 <article id={p.fields.categoria} className="col-sm-6 col-md-4 col-lg-4 p-2 mb-0 grid-item " key={p.sys.id}>
                    <div className="card img-container">
                         <img src={p.fields.image.fields.file.url} className="card-img-top img-fluid" alt="receita-img" />
-                        <button className="rounded-left btn-ver-receita" >
+                        <button className="rounded-left btn-ver-receita" onClick={() => Router.push(`/blog/[id]`, `/blog/${p.sys.id}`)}>
                                  Ver Receita <i className="fa fa-cutlery" aria-hidden="true"></i>
                         </button>
                         <div className="card-header p-2">
