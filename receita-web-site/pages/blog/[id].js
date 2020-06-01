@@ -33,7 +33,7 @@ Receita.getInitialProps = async (ctx) => {
         
         let dado = await client.getEntries({
           content_type: "receitaPost",
-          'sys.id[in]': ctx.query.sys.id
+          'sys.id': ctx.query.sys.id
         });
         return {receita: dado.items};
 };
