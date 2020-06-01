@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { getOnePostByID } from '../../lib/api';
+import { client, getOnePostByID } from '../../lib/api';
 import ErrorPage from 'next/error';
 
 const Receita = ( { receita } ) => {
