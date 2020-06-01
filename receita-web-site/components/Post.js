@@ -23,7 +23,7 @@ const  Post = ({ posts, loading }) => {
                                  Ver Receita <i className="fa fa-cutlery" aria-hidden="true"></i>
                         </button>
                         <div className="card-header p-2">
-                                    <h5 className="card-title mt-1">{p.fields.nome}</h5>
+                                    <h5 className="card-title mt-1 text-truncate">{p.fields.nome}</h5>
                         </div>
                     </div>
                 </article>
