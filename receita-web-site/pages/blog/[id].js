@@ -7,7 +7,6 @@ const Receita = ( { receita } ) => {
     const { id } = router.query;
 
     return (
-       <>
       <div className="row">
         <div className="col-md-6 offset-md-3">
           <div className="card">
@@ -22,12 +21,11 @@ const Receita = ( { receita } ) => {
               <h3>
                 {receita.fields.nome}
               </h3>
-              <p>Email: {receita.fields.descricao}</p>
+              <p>{receita.fields.descricao}</p>
             </div>
           </div>
         </div>
       </div>
-       </>
     );
 };
 
@@ -35,7 +33,7 @@ Receita.getInitialProps = async (ctx) => {
         
         let dado = await client.getEntries({
           content_type: "receitaPost",
-          'sys.id[in]': ctx.query.id
+          'sys.id[in]': ctx.query.sys.id
         });
         return {receita: dado.items};
 };
