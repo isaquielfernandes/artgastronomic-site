@@ -7,24 +7,27 @@ const Receita = ( { receita } ) => {
     const { id } = router.query;
 
     return (
-        <div className="modal fade" id="post-receita" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div className="modal-content">
-                    <div className="modal-header">
-                    <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                    </div>
-                    <div className="modal-body">
-                    ...
-                    </div>
-                    <div className="modal-footer">
-                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    </div>
-                </div>
+       <>
+      <div className="row">
+        <div className="col-md-6 offset-md-3">
+          <div className="card">
+            <div className="card-header text-center">
+              <img
+                src={receita.fields.image.fields.file.url}
+                alt={receita.fields.nome}
+                style={{ borderRadius: "4%" }}
+              />
             </div>
+            <div className="card-body text-center">
+              <h3>
+                {receita.fields.nome}
+              </h3>
+              <p>Email: {receita.fields.descricao}</p>
+            </div>
+          </div>
+        </div>
       </div>
+       </>
     );
 };
 
