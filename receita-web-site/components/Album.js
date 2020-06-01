@@ -5,7 +5,7 @@ const Album = () => (
         {/* outher section */}
         <hr className="hr" />
         <div id="album" className="container section">
-            <div className="card mb-3">
+            <div className="shadow-sm rounded card mb-3">
             <h3 className="card-header">Album</h3>
             <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
                 <ol className="carousel-indicators">
@@ -49,7 +49,7 @@ const Album = () => (
                 2 days ago
             </div>
             </div>
-            <div className="card">
+            <div className="shadow-sm card rounded">
             <div className="card-body text-center">
                 <img src="img/logo/logotipo.jpg" className="img-fluid img-thumbnail img-logo mb-2" width={120} height={120} alt="logotipo chefsassyfnandes" />
                 <h4 className="card-title text-center"><b>Sassy Fernandes</b></h4>
