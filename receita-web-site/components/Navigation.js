@@ -1,12 +1,12 @@
-import Link from "next/link";
+import Link from "next/link"; 
+import Logo from "./Logo";
 
 const Navigation = () => (
     <header>
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
             <Link href="/">     
                 <a className="navbar-brand">
-                    <img src="img/logo/logo.jpeg" width={30} height={30} className="rounded mr-1 d-inline-block
-                    align-top" alt="logo" loading="lazy" />
+                    <Logo/>
                     ArtGastronomic
                 </a>
             </Link>

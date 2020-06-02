@@ -1,17 +1,15 @@
 import Meta from "./Meta";
 import Navigation from "./Navigation";
+import Footer from './Footer';
 
 const Layout = ({ children }) =>(
     <>
         <Meta/>
         <Navigation/>
-        <div className="container">
-            <div className="row">
-                    <div className="col-md-6 offset-md-3">
-                            <main>{children}</main>
-                    </div>
-                </div>
+        <div className="section container">
+            {children}
         </div>
+        <Footer/>
     </>
 )
 
