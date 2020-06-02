@@ -6,10 +6,8 @@ import Head from 'next/head';
 import Footer from "../components/Footer";
 import Post from '../components/Post';
 import { client } from '../lib/api';
-import ReactPaginate from 'react-paginate';
-import Pagination from '../components/Pagination';
-import Paginator from '../components/Paginator';
-import PaginationRounded from '../components/PaginationRounded';
+//import Paginator from '../components/Paginator';
+import {Paginator} from 'primereact/paginator';
 
 const calculateRange = (length) => Array.from({ length }, (v, k) => k + 1);
 
@@ -22,16 +20,22 @@ const  Index = (props) => {
   const limit = props.limit;
   const rangeLimit = Math.ceil(total / limit);
   const range = calculateRange(rangeLimit);
-
   
   const [currentPage, setCurrentPage] = useState(!!props.page ? props.page : 1);
-  const [postsPerPage] = useState(limit);
 
+  const [first, setFirst] = useState(0);
+  const [rows, setRows] = useState(6);
+
+  const onPageChange = (event) => {
+    setFirst(event.first);
+    setRows(event.rows);
+  };
+ 
+  let pag = (first/rows) + 1;
   useEffect(() => {
-    void router.push({ pathname: '/', query: { page: currentPage } });
-  }, [currentPage]);
+    void router.push({ pathname: '/', query: { page: pag, postsPerPage: rows, skip: first} });
+  }, [first, rows]);
 
-  //const paginate = pageNumber => setCurrentPage(pageNumber);
   return (
         <>
           <Container>
@@ -42,14 +46,9 @@ const  Index = (props) => {
                 <Post posts = { posts } loading={ loading } />
               </div>
               <div className="card-footer">
-                <Paginator
-                    handlePaginationChange={(event) => setCurrentPage(event)}
-                    range={range}
-                    skip={currentPage}/>
-                {/*<Pagination skip={currentPage} postsPerPage={postsPerPage} totalPosts={total} paginate={paginate} />*/}
+                 <Paginator first={first} rows={rows} totalRecords={total} rowsPerPageOptions={[3,6,9,12]} onPageChange={onPageChange}></Paginator>   
               </div>
           </Container>
-          
           <Footer/>
         </>
   )
@@ -57,13 +56,19 @@ const  Index = (props) => {
 
 Index.getInitialProps = async ({ query }) => {
   let page = 1;
-  if (query.page) {
-    page = parseInt(query.page + '');
+  if (query.skip) {
+    page = parseInt(query.skip + '');
   }
+
+  let postsPerPage = 6;
+  if (query.postsPerPage) {
+    postsPerPage = parseInt(query.postsPerPage + '');
+  }  
+
   let dados = await client.getEntries({
     content_type: "receitaPost",
-    limit: 6,
-    skip: (page - 1) * 6
+    limit: postsPerPage,
+    skip: page 
   });
   return {page, receitas: dados.items, skip: dados.skip, total: dados.total, limit: dados.limit };
 };

@@ -16,7 +16,7 @@ const  Post = ({ posts, loading }) => {
     return (
         <div className="card-columns grid">
             { posts.map((p) => (
-                <article id={p.fields.categoria} className="col-sm-6 col-md-4 col-lg-4 p-2 mb-0 grid-item " key={p.sys.id}>
+                <article id={p.fields.categoria} className="grid-item " key={p.sys.id}>
                    <div className="card img-container">
                         <img src={p.fields.image.fields.file.url} className="card-img-top img-fluid" alt="receita-img" />
                         <button className="rounded-left btn-ver-receita" onClick={() => Router.push(`/post/[id]`, `/post/${p.sys.id}`)}>
