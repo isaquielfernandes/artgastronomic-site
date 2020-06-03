@@ -17,11 +17,9 @@ const Navigation = () => {
                     ArtGastronomic
                 </a>
             </Link>
-            <button className="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <Button onClick={(e) => setVisibleLeft(true)} className="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                  <span className="navbar-toggler-icon" />
-            </button>
-            
-            <Button icon="pi pi-arrow-right" onClick={(e) => setVisibleLeft(true)}  style={{marginRight:'.25em'}} />
+            </Button>
 
             <div className="navbar-collapse offcanvas-collapse" id="navbarSupportedContent">
             <Sidebar visible={visibleLeft} baseZIndex={1000000} onHide={() => setVisibleLeft(false)}>
@@ -38,12 +36,12 @@ const Navigation = () => {
                 </li>
                 <li className="nav-item">
                     <Link href="/">
-                        <a className="nav-link" href="#receitas">Receitas</a>
+                        <a className="nav-link">Receitas</a>
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link href="/">
-                         <a className="nav-link" href="#contact">Contactos</a>
+                    <Link href="/contato">
+                         <a className="nav-link">Contactos</a>
                     </Link>
                 </li>
             </ul>
