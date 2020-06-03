@@ -17,12 +17,12 @@ const Navigation = () => {
                     ArtGastronomic
                 </a>
             </Link>
-            <Button onClick={(e) => setVisibleLeft(true)} className="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button className="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                  <span className="navbar-toggler-icon" />
-            </Button>
+            </button>
 
             <div className="navbar-collapse offcanvas-collapse" id="navbarSupportedContent">
-            <Sidebar visible={visibleLeft} baseZIndex={1000000} onHide={() => setVisibleLeft(false)}>
+            
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                     <Link href="/index">
@@ -45,7 +45,7 @@ const Navigation = () => {
                     </Link>
                 </li>
             </ul>
-            </Sidebar>
+            
             </div>
         </nav>
     </header>
