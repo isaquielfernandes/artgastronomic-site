@@ -26,7 +26,8 @@ const MainSection = (prosps) => {
     };
 
     const handleClick = (e) => {
-        e.preventDefault()
+        e.preventDefault();
+        setCategoria(e.value);
     }
 
     return(
@@ -41,8 +42,8 @@ const MainSection = (prosps) => {
                                         <header>
                                             <h5 className=""style={{width: '10rem'}}>Receitas</h5>
                                             <hr/>
-                                            <Dropdown value={categoria} options={categorias} onChange={onCategoriaChange} className="float-sm-right" style={{width: '16em'}}
-                                                       editable={true} placeholder="Selecione uma Categoria" />
+                                            <Dropdown value={categoria} options={categorias} onChange={onCategoriaChange} className="float-sm-right" style={{width: '16rem'}}
+                                                       editable={false} placeholder="Selecione uma Categoria" />
                                             {/*<div style={{marginTop: '.5em'}}>{categoria ? 'Selected Cat: ' + categoria : 'No categoria selected'}</div>*/}
                                         </header>
                                     </div>
