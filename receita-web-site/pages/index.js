@@ -6,7 +6,6 @@ import Head from 'next/head';
 import Footer from "../components/Footer";
 import Post from '../components/Post';
 import { client } from '../lib/api';
-//import Paginator from '../components/Paginator';
 import {Paginator} from 'primereact/paginator';
 
 const calculateRange = (length) => Array.from({ length }, (v, k) => k + 1);
@@ -20,8 +19,6 @@ const  Index = (props) => {
   const limit = props.limit;
   const rangeLimit = Math.ceil(total / limit);
   const range = calculateRange(rangeLimit);
-  
-  const [currentPage, setCurrentPage] = useState(!!props.page ? props.page : 1);
 
   const [first, setFirst] = useState(0);
   const [rows, setRows] = useState(6);

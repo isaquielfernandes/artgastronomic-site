@@ -1,14 +1,16 @@
 import Meta from "./Meta";
 import Navigation from "./Navigation";
+import Contacto from "./Contacto";
 import Footer from './Footer';
 
 const Layout = ({ children }) =>(
     <>
         <Meta/>
         <Navigation/>
-        <div className="section container">
+        <div className="mg-t-10 container">
             {children}
         </div>
+        <Contacto/>
         <Footer/>
     </>
 )

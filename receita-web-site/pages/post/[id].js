@@ -1,7 +1,9 @@
 import { useRouter } from 'next/router';
 import { client, getOnePostByID } from '../../lib/api';
 import ErrorPage from 'next/error';
+import $ from 'jquery';
 import Layout from '../../components/Layout';
+
 
 const Receita = ( { receita } ) => {
     const router = useRouter();
@@ -9,7 +11,7 @@ const Receita = ( { receita } ) => {
     return (
       <Layout>
           <div className="row">
-            <div className="col-md-6 offset-md-2">
+            <div className="col-md-9 offset-md-0">
             { receita.map((p) => (
               <div key={p.sys.id} className="card">
                   <div className="card-header">
@@ -20,7 +22,7 @@ const Receita = ( { receita } ) => {
                   <img
                       src={p.fields.image.fields.file.url}
                       alt={p.fields.nome}
-                      className="card-img-top" alt={p.fields.nome}
+                      className="card-img-top rounded-0" alt={p.fields.nome}
                     />
                   <div className="card-body">
                     <p>{p.fields.descricao}</p>
