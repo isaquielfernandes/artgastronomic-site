@@ -5,7 +5,6 @@ const MainSection = (prosps) => {
     const [categoria, setCategoria] = useState(null);
 
     let categorias = [
-        {label: 'Todos', value: '*'},
         {label: 'Peixe', value: 'peixe'},
         {label: 'Carne', value: 'carne'},
         {label: 'Entradas & Petiscos', value: 'entradas-petiscos'},
@@ -66,7 +65,7 @@ const MainSection = (prosps) => {
                                 <div className="collapse show categoria" id="collapseCategoria" aria-labelledby="categoria-header" data-parent="#categoria-section">
                                     <div className="card-body p-2">
                                         <nav className="receitaFilter clearfix list-group list-group-flush">
-                                            <a href="#" data-filter="*" className="list-group-item list-group-item-action p-1 active" aria-selected="true">Todos</a>
+                                            <a href="" data-filter="*" onClick={handleClick} className="list-group-item list-group-item-action p-1 active" aria-selected="true">Todos</a>
                                             { categorias.map((cat) => (
                                                 <a href="" key={cat.value} data-filter={cat.value} onClick={handleClick} className="list-group-item list-group-item-action p-1" aria-selected="false">{cat.label}</a>
                                             ))}
