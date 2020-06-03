@@ -20,7 +20,7 @@ const  Post = ({ posts, loading }) => {
                     <button className="rounded-left btn-ver-receita" onClick={() => Router.push(`/post/[id]`, `/post/${p.sys.id}`)}>
                         Ver Receita <i className="fa fa-cutlery" aria-hidden="true"></i>
                     </button>
-                    <div className="card-header p-2">
+                    <div className="card-body p-2">
                         <h5 className="card-title mt-1 text-truncate">{p.fields.nome}</h5>
                     </div>
                 </article>
