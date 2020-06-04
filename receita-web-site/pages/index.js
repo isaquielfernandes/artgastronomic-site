@@ -36,7 +36,7 @@ const  Index = (props) => {
     setCategoria(e.value);
   };
  
-  let pag = (first/rows) + 1;
+  let pag = total == 0 ? 0 : ((first/rows) + 1);
   useEffect(() => {
     void router.push({ pathname: '/', query: { page: pag, limit: rows, skip: first, categoria: categoria} });
   }, [first, rows, categoria]);
@@ -51,7 +51,7 @@ const  Index = (props) => {
                   <header className="p-fluid">
                     <h5 className="">Receitas</h5>
                     <hr/>
-                    <Dropdown value={categoria} options={categorias} onChange={onCategoriaChange} className="mb-3 d-lg-none" 
+                    <Dropdown pageLinkSize={3} value={categoria} options={categorias} onChange={onCategoriaChange} className="mb-3 d-lg-none" 
                                                        editable={false} placeholder="Selecione uma Categoria" />
                     
                   </header>                      
