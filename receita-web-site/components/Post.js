@@ -13,15 +13,17 @@ const  Post = ({ posts, loading }) => {
     }
    
     return (
-        <div className="card-columns clearfix grid" >
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 px-2 clearfix grid" >
             { posts.map((p) => (
-                <article id={p.fields.categoria} className="card rounded-0 img-container grid-item" key={p.sys.id}>
-                    <img src={p.fields.image.fields.file.url} className="card-img-top img-fluid rounded-0" alt="receita-img" />
-                    <button className="rounded-left btn-ver-receita" onClick={() => Router.push(`/post/[id]`, `/post/${p.sys.id}`)}>
-                        Ver Receita <i className="fa fa-cutlery" aria-hidden="true"></i>
-                    </button>
-                    <div className="card-body p-2">
-                        <h5 className="card-title mt-1 text-truncate">{p.fields.nome}</h5>
+                <article key={p.sys.id} className="col mb-3 px-sm-2 grid-item">
+                    <div id={p.fields.categoria} className="card rounded-0 h-100 img-container" >
+                        <img src={p.fields.image.fields.file.url} className="card-img-top img-fluid rounded-0" alt="receita-img" />
+                        <button className="rounded-left btn-ver-receita" onClick={() => Router.push(`/post/[id]`, `/post/${p.sys.id}`)}>
+                            Ver Receita <i className="fa fa-cutlery" aria-hidden="true"></i>
+                        </button>
+                        <div className="card-body p-2">
+                            <h5 className="card-title text-truncate">{p.fields.nome}</h5>
+                        </div>
                     </div>
                 </article>
             ))}

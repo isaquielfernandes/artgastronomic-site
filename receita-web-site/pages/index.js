@@ -6,7 +6,10 @@ import Head from 'next/head';
 import Footer from "../components/Footer";
 import Post from '../components/Post';
 import { client } from '../lib/api';
+import { categorias } from '../lib/constante';
+import {Dropdown} from 'primereact/dropdown';
 import {Paginator} from 'primereact/paginator';
+
 
 const calculateRange = (length) => Array.from({ length }, (v, k) => k + 1);
 
@@ -22,16 +25,21 @@ const  Index = (props) => {
 
   const [first, setFirst] = useState(0);
   const [rows, setRows] = useState(6);
+  const [categoria, setCategoria] = useState('*');
 
   const onPageChange = (event) => {
     setFirst(event.first);
     setRows(event.rows);
   };
+
+  const onCategoriaChange = (e) => {
+    setCategoria(e.value);
+  };
  
   let pag = (first/rows) + 1;
   useEffect(() => {
-    void router.push({ pathname: '/', query: { page: pag, postsPerPage: rows, skip: first} });
-  }, [first, rows]);
+    void router.push({ pathname: '/', query: { page: pag, limit: rows, skip: first, categoria: categoria} });
+  }, [first, rows, categoria]);
 
   return (
         <>
@@ -39,6 +47,15 @@ const  Index = (props) => {
               <Head>
                   <title>Home - Art Gastronomic</title>
               </Head>
+              <div className="card-header">
+                  <header className="p-fluid">
+                    <h5 className="">Receitas</h5>
+                    <hr/>
+                    <Dropdown value={categoria} options={categorias} onChange={onCategoriaChange} className="mb-3 d-lg-none" 
+                                                       editable={false} placeholder="Selecione uma Categoria" />
+                    
+                  </header>                      
+              </div>
               <div className="card-body p-2">
                 <Post posts = { posts } loading={ loading } />
               </div>
@@ -64,6 +81,7 @@ Index.getInitialProps = async ({ query }) => {
 
   let dados = await client.getEntries({
     content_type: "receitaPost",
+    'fields.categoria[in]': !(query.categoria === '*' ) ? query.categoria : categorias.map((cat) => (cat.value)).toString(),
     limit: postsPerPage,
     skip: page 
   });

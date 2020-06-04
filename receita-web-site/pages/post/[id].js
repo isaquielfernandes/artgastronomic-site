@@ -28,7 +28,9 @@ const Receita = ( { receita } ) => {
                     <p>{p.fields.descricao}</p>
                   </div>
                   <div className="card-footer text-muted">
-                    <time pubdate>{p.sys.updatedAt}</time>
+                    <time pubdate="true">
+                      <Date dateString={p.sys.updatedAt} />
+                    </time>
                   </div>
               </div>
               ))}
