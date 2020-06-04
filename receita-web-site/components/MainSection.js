@@ -31,7 +31,7 @@ const MainSection = (prosps) => {
     }
 
     return(
-        <div className="section">
+        <main role="main" className="section">
             <hr className="hr" />
             <div id="receitas" className="container">
                 <div className="row">
@@ -42,9 +42,9 @@ const MainSection = (prosps) => {
                                         <header>
                                             <h5 className=""style={{width: '10rem'}}>Receitas</h5>
                                             <hr/>
-                                            <Dropdown value={categoria} options={categorias} onChange={onCategoriaChange} className="float-sm-right" style={{width: '16rem'}}
+                                            <Dropdown value={categoria} options={categorias} onChange={onCategoriaChange} className="float-sm-right" style={{width: '18rem'}}
                                                        editable={false} placeholder="Selecione uma Categoria" />
-                                            <div style={{marginTop: '.5em'}}>{categoria ? 'Selected Cat: ' + categoria : 'Todos: '+ categorias.map((cat) => (cat.value))}</div>
+                                            {/*<div style={{marginTop: '.5em'}}>{categoria ? 'Selected Cat: ' + categoria : 'Todos: '+ categorias.map((cat) => (cat.value))}</div>*/}
                                         </header>
                                     </div>
                                     {prosps.children}
@@ -78,7 +78,7 @@ const MainSection = (prosps) => {
                     </div>{/* categoria receita end */}
                 </div>
             </div>
-        </div>
+        </main>
     )
 
 };
