@@ -44,7 +44,7 @@ const MainSection = (prosps) => {
                                             <hr/>
                                             <Dropdown value={categoria} options={categorias} onChange={onCategoriaChange} className="float-sm-right" style={{width: '16rem'}}
                                                        editable={false} placeholder="Selecione uma Categoria" />
-                                            <div style={{marginTop: '.5em'}}>{categoria ? 'Selected Cat: ' + categoria : 'Todos: '+ categorias}</div>
+                                            <div style={{marginTop: '.5em'}}>{categoria ? 'Selected Cat: ' + categoria : 'Todos: '+ categorias.map((cat) => (cat.value))}</div>
                                         </header>
                                     </div>
                                     {prosps.children}
