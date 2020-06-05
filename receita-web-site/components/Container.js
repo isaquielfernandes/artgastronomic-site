@@ -11,7 +11,7 @@ const Container = (prosps) => (
         <Navigation/>
         <Banner/>
         <MainSection>
-            <div>{prosps.children}</div>
+            {prosps.children}
         </MainSection>
         <Album/>
         <Contacto/>

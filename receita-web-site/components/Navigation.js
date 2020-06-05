@@ -26,22 +26,22 @@ const Navigation = () => {
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                     <Link href="/index">
-                        <a className="nav-link">Home</a>
+                        <a className="nav-link pl-1">Home</a>
                     </Link>
                 </li>
                 <li className="nav-item">
                     <Link href="/">
-                         <a className="nav-link" href="https://www.youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank">YouTube</a>
+                         <a className="nav-link pl-1" href="https://www.youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank">YouTube</a>
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link href="/MainSection">
-                        <a className="nav-link">Receitas</a>
+                    <Link href="/">
+                        <a href="#receitas" className="nav-link pl-1">Receitas</a>
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link href="/Contacto">
-                         <a className="nav-link">Contactos</a>
+                    <Link href="/">
+                         <a href="#contact" className="nav-link pl-1">Contactos</a>
                     </Link>
                 </li>
             </ul>

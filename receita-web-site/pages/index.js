@@ -8,6 +8,8 @@ import Post from '../components/Post';
 import { client } from '../lib/api';
 import { categorias } from '../lib/constante';
 import {Dropdown} from 'primereact/dropdown';
+import {ListBox} from 'primereact/listbox';
+import {Panel} from 'primereact/panel';
 import {Paginator} from 'primereact/paginator';
 
 
@@ -47,20 +49,34 @@ const  Index = (props) => {
               <Head>
                   <title>Home - Art Gastronomic</title>
               </Head>
-              <div className="card-header">
-                  <header className="p-fluid">
-                    <h5 className="">Receitas</h5>
-                    <hr/>
-                    <Dropdown pageLinkSize={3} value={categoria} options={categorias} onChange={onCategoriaChange} className="mb-3 d-lg-none" 
-                                                       editable={false} placeholder="Selecione uma Categoria" />
-                    
-                  </header>                      
+
+              <div className="col-sm-12 col-md-12 col-lg-9 mb-2">
+                  <section className="receita-section">
+                    <div className="card">
+                    <div className="card-header">
+                      <header className="p-fluid">
+                        <h5 className="">Receitas</h5>
+                        <hr/>
+                        <Dropdown pageLinkSize={3} value={categoria} options={categorias} onChange={onCategoriaChange} className="mb-3 d-lg-none" editable={false} placeholder="Selecione uma Categoria" />
+                        
+                      </header>                      
+                    </div>
+                    <div className="card-body p-2">
+                      <Post posts = { posts } loading={ loading } />
+                    </div>
+                    <div className="card-footer">
+                      <Paginator first={first} rows={rows} totalRecords={total} rowsPerPageOptions={[3,6,9,12]} onPageChange={onPageChange}></Paginator>   
+                    </div>           
+                    </div>
+                  </section>
               </div>
-              <div className="card-body p-2">
-                <Post posts = { posts } loading={ loading } />
-              </div>
-              <div className="card-footer">
-                 <Paginator first={first} rows={rows} totalRecords={total} rowsPerPageOptions={[3,6,9,12]} onPageChange={onPageChange}></Paginator>   
+
+              <div className="col-sm-12 col-md-12 col-lg-3 mb-2">
+                  <aside id="categoria-section" className="categoria-section d-none d-lg-block">    
+                    <Panel id="categoria-panel" header="Categorias" className="p-0 p-fluid">
+                      <ListBox value={categoria} options={categorias} onChange={ onCategoriaChange } />
+                    </Panel>   
+                  </aside>
               </div>
           </Container>
           <Footer/>
