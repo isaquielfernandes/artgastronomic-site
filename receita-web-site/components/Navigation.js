@@ -21,8 +21,9 @@ const Navigation = () => {
                  <span className="navbar-toggler-icon" />
             </button>
 
-            <div className="navbar-collapse offcanvas-collapse" id="navbarContent">
-            
+           <Button icon="pi pi-arrow-right" onClick={(e) => setVisibleLeft(true)}  style={{marginRight:'.25em'}} />
+       
+            <div className="navbar-collapse offcanvas-collapse" id="navbarContent">    
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                     <Link href="/index">
@@ -36,43 +37,16 @@ const Navigation = () => {
                 </li>
                 <li className="nav-item">
                     <Link href="/">
-                        <a href="#receitas" className="nav-link pl-1">Receitas</a>
+                        <a className="nav-link pl-1">Receitas</a>
                     </Link>
                 </li>
                 <li className="nav-item">
                     <Link href="/">
-                         <a href="#contact" className="nav-link pl-1">Contactos</a>
-                    </Link>
-                </li>
-            </ul>
-            </div>
-
-            <Sidebar visible={visibleRight} position="right" baseZIndex={1000000} onHide={() => setVisibleRight(false)}>
-              <ul className="navbar-nav mr-auto">
-                <li className="nav-item">
-                    <Link href="/index">
-                        <a className="nav-link pl-1">Home</a>
-                    </Link>
-                </li>
-                <li className="nav-item">
-                    <Link href="/">
-                         <a className="nav-link pl-1" href="https://www.youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank">YouTube</a>
-                    </Link>
-                </li>
-                <li className="nav-item">
-                    <Link href="/">
-                        <a href="#receitas" className="nav-link pl-1">Receitas</a>
-                    </Link>
-                </li>
-                <li className="nav-item">
-                    <Link href="/">
-                         <a href="#contact" className="nav-link pl-1">Contactos</a>
+                         <a className="nav-link pl-1">Contactos</a>
                     </Link>
                 </li>
               </ul>
-              <Button type="button" onClick={(e) => setVisibleRight(false)} label="Cancel" className="p-button-secondary"/>
-            </Sidebar>
-
+            </div>
         </nav>
     </header>
  )
