@@ -21,7 +21,7 @@ const Navigation = () => {
                  <span className="navbar-toggler-icon" />
             </button>
 
-            <Sidebar visible={visibleRight} position="right" baseZIndex={1000000} onHide={() => setVisibleRight(false)} className="navbar-collapse offcanvas-collapse" id="nnnavbarContent">    
+            <Sidebar visible={visibleRight} position="right" baseZIndex={1000000} onHide={() => setVisibleRight(false)} className="navbar-collapse offcanvas-collapse" id="navbarContent">    
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                     <Link href="/index">
