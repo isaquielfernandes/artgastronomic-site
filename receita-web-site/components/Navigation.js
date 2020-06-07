@@ -14,7 +14,7 @@ const Navigation = () => {
             <Link href="/">     
                 <a className="navbar-brand">
                     <Logo/>
-                    <h5>ArtGastronomic</h5>
+                    ArtGastronomic
                 </a>
             </Link>
             <button className="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
