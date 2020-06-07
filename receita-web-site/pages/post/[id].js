@@ -25,10 +25,10 @@ const Receita = ( { receita } ) => {
                       className="card-img-top rounded-0" alt={p.fields.nome}
                     />
                   <div className="card-body">
-                    <p>{p.fields.descricao}</p>
+                    <div>{p.fields.descricao}</div>
                   </div>
                   <div className="card-footer text-muted">
-                      <Date dateString={p.sys.updatedAt} />
+                      <Date dateString={p.sys.createdAt} />
                   </div>
               </div>
               ))}
