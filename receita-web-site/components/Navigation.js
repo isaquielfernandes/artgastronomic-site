@@ -6,7 +6,7 @@ import {Button} from 'primereact/button';
 
 
 const Navigation = () => {
-   const [visibleLeft, setVisibleLeft] = useState(false);
+  const [visibleRight, setVisibleRight] = useState(false);
 
   return(
     <header>
@@ -21,9 +21,9 @@ const Navigation = () => {
                  <span className="navbar-toggler-icon" />
             </button>
 
-            <Button icon="pi pi-arrow-right" onClick={(e) => setVisibleLeft(true)}  style={{marginRight:'.25em'}} />
+            <Button icon="pi pi-arrow-right" onClick={(e) => setVisibleRight(true)}  style={{marginRight:'.25em'}} />
        
-            <Sidebar visible={visibleRight} position="right" baseZIndex={1000000} onHide={() => setVisibleRight(false)} className="navbar-collapse " id="navbarContent">    
+            <Sidebar visible={visibleRight} position="right" baseZIndex={1000000} onHide={() => setVisibleRight(false)} className="navbar-collapse offcanvas-collapse" id="navbarContent">    
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                     <Link href="/index">
