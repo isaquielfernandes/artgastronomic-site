@@ -32,7 +32,7 @@ const Receita = ( { receita } ) => {
                   </div>
                   <div className="card-footer text-muted">
                       <span>{p.sys.createdAt}</span>
-                      <time>formatISO({p.sys.createdAt}, { representation: 'date' })</time>
+                      
                   </div>
               </div>
               ))}
