@@ -1,4 +1,4 @@
-import { formatDistanceToNow, format } from 'date-fns';
+import { formatISO, formatDistanceToNow, format } from 'date-fns';
 
 export default function Date({ dateString }) {
   return (
