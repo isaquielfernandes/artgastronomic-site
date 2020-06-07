@@ -31,7 +31,6 @@ const Receita = ( { receita } ) => {
                   </div>
                   <div className="card-footer text-muted">
                       <span>{p.sys.createdAt}</span>
-                      <Date dateString={p.sys.createdAt}/>
                   </div>
               </div>
               ))}
