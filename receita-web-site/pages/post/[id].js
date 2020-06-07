@@ -3,6 +3,7 @@ import { client, getOnePostByID } from '../../lib/api';
 import ErrorPage from 'next/error';
 import $ from 'jquery';
 import Layout from '../../components/Layout';
+import { format } from 'date-fns';
 
 
 const Receita = ( { receita } ) => {
@@ -28,8 +29,8 @@ const Receita = ( { receita } ) => {
                     <div>{p.fields.descricao}</div>
                   </div>
                   <div className="card-footer text-muted">
-                      <span>{p.sys.createdAt}</span>
-                      {/*<Date dateString={p.sys.createdAt}*/} />
+                      <span>format({p.sys.createdAt}, 'MM/dd/yyyy')</span>
+                      {/*<Date dateString={p.sys.createdAt}/>*/}
                   </div>
               </div>
               ))}
