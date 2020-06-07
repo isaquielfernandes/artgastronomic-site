@@ -3,6 +3,7 @@ import { client, getOnePostByID } from '../../lib/api';
 import ErrorPage from 'next/error';
 import $ from 'jquery';
 import Layout from '../../components/Layout';
+import Date from '../../components/Date';
 import { format } from 'date-fns';
 
 
