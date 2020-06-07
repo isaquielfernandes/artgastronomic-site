@@ -14,14 +14,14 @@ const Navigation = () => {
             <Link href="/">     
                 <a className="navbar-brand">
                     <Logo/>
-                    ArtGastronomic
+                    <h5>ArtGastronomic</h5>
                 </a>
             </Link>
-            <button onClick={(e) => setVisibleRight(true)} className="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button className="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                  <span className="navbar-toggler-icon" />
             </button>
 
-            <Sidebar visible={visibleRight} position="right" baseZIndex={1000000} onHide={() => setVisibleRight(false)} className="navbar-collapse offcanvas-collapse" id="navbarContent">    
+            <div className="navbar-collapse offcanvas-collapse" id="navbarContent">    
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                     <Link href="/index">
@@ -44,7 +44,7 @@ const Navigation = () => {
                     </Link>
                 </li>
               </ul>
-            </Sidebar>
+            </div>
         </nav>
     </header>
  )
