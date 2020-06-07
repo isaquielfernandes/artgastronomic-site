@@ -1,15 +1,16 @@
 import { useRouter } from 'next/router';
 import { client, getOnePostByID } from '../../lib/api';
 import ErrorPage from 'next/error';
-import $ from 'jquery';
 import Layout from '../../components/Layout';
 import Date from '../../components/Data';
 import { formatISO, format } from 'date-fns';
 
 
 const Receita = ( { receita } ) => {
+
     const router = useRouter();
     const { id } = router.query;
+
     return (
       <Layout>
           <div className="row">
