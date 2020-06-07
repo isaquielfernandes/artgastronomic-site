@@ -17,11 +17,11 @@ const Navigation = () => {
                     ArtGastronomic
                 </a>
             </Link>
-            <button className="navbar-toggler" type="button" onClick={(e) => setVisibleLeft(true)} data-toggle="oooffcanvas" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button className="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                  <span className="navbar-toggler-icon" />
             </button>
 
-            <div className="navbar-collapse oooffcanvas-collapse" id="navbarContent">
+            <div className="navbar-collapse offcanvas-collapse" id="navbarContent">
             
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
