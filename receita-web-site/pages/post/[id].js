@@ -29,8 +29,8 @@ const Receita = ( { receita } ) => {
                     <div>{p.fields.descricao}</div>
                   </div>
                   <div className="card-footer text-muted">
-                      <span>format({p.sys.createdAt}, 'MM/dd/yyyy')</span>
-                      {/*<Date dateString={p.sys.createdAt}/>*/}
+                      <span>{p.sys.createdAt}</span>
+                      <Date dateString={p.sys.createdAt}/>
                   </div>
               </div>
               ))}
