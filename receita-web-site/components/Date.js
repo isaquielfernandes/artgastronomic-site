@@ -3,7 +3,7 @@ import { formatDistanceToNow, format } from 'date-fns';
 const Date = ({ dateString }) => {
     return (
         <time dateTime={dateString}>
-            {formatDistanceToNow(dataString)}
+            {formatDistanceToNow(new Date(dataString))}
         </time>
     )
 }
