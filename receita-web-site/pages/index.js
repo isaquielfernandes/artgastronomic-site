@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import $ from 'jquery';
 import Container from "../components/Container";
 import Head from 'next/head';
 import Footer from "../components/Footer";
@@ -38,7 +37,7 @@ const  Index = (props) => {
     setCategoria(e.value);
   };
  
-  let pag = total == 0 ? 0 : ((first/rows) + 1);
+  let pag = (first/rows) + 1;
   useEffect(() => {
     void router.push({ pathname: '/', query: { page: pag, limit: rows, skip: first, categoria: categoria} });
   }, [first, rows, categoria]);
@@ -85,12 +84,12 @@ const  Index = (props) => {
 };
 
 Index.getInitialProps = async ({ query }) => {
-  let page = 1;
+  let page;
   if (query.skip) {
     page = parseInt(query.skip + '');
   }
 
-  let postsPerPage = 6;
+  let postsPerPage;
   if (query.postsPerPage) {
     postsPerPage = parseInt(query.postsPerPage + '');
   }  
