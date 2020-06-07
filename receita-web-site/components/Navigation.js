@@ -23,7 +23,7 @@ const Navigation = () => {
 
             <Button icon="pi pi-arrow-right" onClick={(e) => setVisibleLeft(true)}  style={{marginRight:'.25em'}} />
        
-            <Sidebar visible={visibleRight} position="right" baseZIndex={1000000} onHide={() => setVisibleRight(false)} className="navbar-collapse offcanvas-collapse" id="navbarContent">    
+            <Sidebar visible={visibleRight} position="right" baseZIndex={1000000} onHide={() => setVisibleRight(false)} className="navbar-collapse " id="navbarContent">    
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                     <Link href="/index">
