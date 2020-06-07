@@ -89,7 +89,7 @@ Index.getInitialProps = async ({ query }) => {
     page = parseInt(query.skip + '');
   }
 
-  let postsPerPage;
+  let postsPerPage = 6;
   if (query.postsPerPage) {
     postsPerPage = parseInt(query.postsPerPage + '');
   }  
