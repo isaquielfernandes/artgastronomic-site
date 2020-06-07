@@ -1,9 +1,9 @@
-import { format } from 'date-fns';
+import { formatDistanceToNow, format } from 'date-fns';
 
 const Date = ({ dateString }) => {
     return (
         <time>
-            {format(new Date(dataString), 'LLLL    d, yyyy')}
+            {formatDistanceToNow(new Date(dataString))}
         </time>
     )
 }
