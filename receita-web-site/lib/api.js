@@ -1,6 +1,4 @@
 import { createClient } from 'contentful';
- {/** space: "dcugw5hovzo7" 
-  accessToken: "yMCnTzi1YDlxhXNk48g9bBA6vYOLOrR0tcJCUKpwoXc", */}
 
 export const client = createClient({
   space: process.env.NEXT_CMS_CONTENTFUL_SPACE_ID,
