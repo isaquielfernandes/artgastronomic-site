@@ -24,7 +24,7 @@ export async function getOnePostByID(id) {
   const entries = await client.getEntries({
     content_type: 'receitaPost',
     limit: 1,
-    'sys.id[in]': id,
+    'sys.id': id,
   })
   return parsePostEntries(entries)
 }
