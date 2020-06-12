@@ -3,6 +3,6 @@ $('.grid').masonry({
   itemSelector: '.grid-item',
 });
 
-ScrollReveal().reveal('.headline');
-ScrollReveal().reveal('.card', { delay: 500 });
-ScrollReveal().reveal('.punchline', { delay: 2000 });
+ScrollReveal().reveal('');
+ScrollReveal().reveal('.col', { delay: 500 });
+ScrollReveal().reveal('', { delay: 2000 });

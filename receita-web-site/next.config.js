@@ -17,24 +17,6 @@ module.exports = {
             })
         )
         return config
-    },
-    /*exportPathMap: async () => {
-        const articles = await generateAllArticles();
-
-        const insights = articles.reduce(
-            (pages, entry) => Object.assign({}, pages, {
-                [``]: {
-                    page: '/post/',
-                    query: { }
-                }
-            }),
-            {}
-        );
-        const pages = {
-            '/': {page: '/'},
-        }
-
-        return Object.assign({}, pages, insights);
-    }*/
+    }
 }
 

@@ -20,6 +20,7 @@
     "masonry-layout": "^4.2.2",
     "next": "9.4.2",
     "next-seo": "^4.5.0",
+    "nextjs-sitemap-generator": "^1.0.0",
     "primeflex": "^1.1.1",
     "primeicons": "^4.0.0-rc.2",
     "primereact": "^4.2.1",
