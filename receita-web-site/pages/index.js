@@ -40,7 +40,7 @@ const  Index = (props) => {
   }, [first, rows, categoria]);
 
   return (
-        <>
+        <div>
           <Container>
               <Head>
                   <title>Home - Art Gastronomic</title>
@@ -67,7 +67,7 @@ const  Index = (props) => {
               
           </Container>
           <Footer/>
-        </>
+        </div>
   )
 };
 
