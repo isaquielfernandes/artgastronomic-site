@@ -7,7 +7,7 @@ const Layout = ({ children }) =>(
     <>
         <Meta/>
         <Navigation/>
-        <div className="mg-t-10 container">
+        <div className="mg-t-15 container">
             {children}
         </div>
         <Contacto/>
