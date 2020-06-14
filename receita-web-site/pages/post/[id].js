@@ -17,7 +17,7 @@ const Receita = ( { receita } ) => {
             <div className="col-md-9 offset-md-0">
             { receita.map((p) => (
               <div key={p.sys.id} className="card">
-                  <div className="card-header">
+                  <div className="card-header text-info">
                     <h3>
                       {p.fields.nome}
                     </h3>
