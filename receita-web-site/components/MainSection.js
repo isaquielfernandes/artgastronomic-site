@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 const MainSection = (prosps) => {
 
     return(
-        <div role="main" className="section">
+        <div role="main" className="">
             <hr className="hr" />
-            <div id="receitas" className="container">
+            <div id="receitas" className="container section">
                 <div className="row">
                     {prosps.children}
                 </div>
