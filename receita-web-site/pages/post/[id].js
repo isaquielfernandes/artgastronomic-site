@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { client, getOnePostByID } from '../../lib/api';
+import { client } from '../../lib/api';
 import ErrorPage from 'next/error';
 import Layout from '../../components/Layout';
 import Date from '../../components/Data';
