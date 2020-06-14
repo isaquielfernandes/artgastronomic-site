@@ -5,7 +5,7 @@ const MainSection = (prosps) => {
     return(
         <div role="main" className="">
             <hr className="hr" />
-            <div id="receitas" className="container section">
+            <div id="receitas" className="container mt-5">
                 <div className="row">
                     {prosps.children}
                 </div>
