@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { client } from '../../lib/api';
 import ErrorPage from 'next/error';
-import Layout from '../../components/Layout';
+import Container from '../../components/Container';
 import Date from '../../components/Data';
 
 
@@ -11,7 +11,8 @@ const Receita = ( { receita } ) => {
     const { id } = router.query;
 
     return (
-      <Layout>
+      <Container>
+        <div className="container">
           <div className="row">
             <div className="col-md-9 offset-md-0">
             { receita.map((p) => (
@@ -36,7 +37,8 @@ const Receita = ( { receita } ) => {
               ))}
             </div>
           </div>
-      </Layout>
+        </div>
+      </Container>
     );
 };
 
