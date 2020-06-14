@@ -10,11 +10,7 @@ const Container = (prosps) => (
     <div>
         <Meta/>
         <Navigation/>
-        <Banner/>
-        <MainSection>
-            {prosps.children}
-        </MainSection>
-        <Album/>
+          {prosps.children}
         <Contacto/>
         <Footer/>
     </div>
