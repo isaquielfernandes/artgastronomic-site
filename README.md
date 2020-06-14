@@ -1,3 +1,2 @@
-# artgastronomic-site
-web site (art gastronomic receitas)
+# ArtGastronomic (Blog)
 ![](./screencapture.jpg)
