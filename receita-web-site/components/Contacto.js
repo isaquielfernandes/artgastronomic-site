@@ -4,7 +4,7 @@ const Contacto = () => (
     <div>
         {/* section contato */}
         <hr className="hr" />
-        <div id="contact" className="container section">
+        <div id="contact" className="container mt-4">
             <aside className="address p-2">
             <h2 >Find Us</h2>
             <div className="row justify-content-sm-center">
