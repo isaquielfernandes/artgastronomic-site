@@ -12,7 +12,7 @@ const Receita = ( { receita } ) => {
 
     return (
       <Container>
-        <div className="container">
+        <div className="container mg-t-15">
           <div className="row">
             <div className="col-md-9 offset-md-0">
             { receita.map((p) => (
