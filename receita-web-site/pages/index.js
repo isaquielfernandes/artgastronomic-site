@@ -3,14 +3,17 @@ import { useRouter } from 'next/router';
 import Container from "../components/Container";
 import Head from 'next/head';
 import Footer from "../components/Footer";
+import Banner from "../components/Banner";
+import Album from "../components/Album";
+import MainSection from "../components/MainSection";
 import Post from '../components/Post';
 import PanelCategoria from '../components/PanelCategoria';
 import CardHeaderPost from '../components/CardHeaderPost';
 import { client } from '../lib/api';
 import { categorias } from '../lib/constante';
-import {Dropdown} from 'primereact/dropdown';
-import {ListBox} from 'primereact/listbox';
-import {Paginator} from 'primereact/paginator';
+import { Dropdown } from 'primereact/dropdown';
+import { ListBox } from 'primereact/listbox';
+import { Paginator } from 'primereact/paginator';
 
 
 const  Index = (props) => {
@@ -44,7 +47,8 @@ const  Index = (props) => {
               <Head>
                   <title>Home - Art Gastronomic</title>
               </Head>
-
+              <Banner/>
+              <MainSection>
               <div className="col-sm-12 col-md-12 col-lg-9 mb-2">
                   <section className="receita-section">
                     <div className="card">
@@ -60,10 +64,13 @@ const  Index = (props) => {
                     </div>
                   </section>
               </div>
-
+           
               <PanelCategoria>
                   <ListBox value={categoria} options={categorias} onChange={ onCategoriaChange } />
               </PanelCategoria>
+              
+              </MainSection>
+              <Album/>
           </Container>
   )
 };
