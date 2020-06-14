@@ -4,7 +4,7 @@ const Album = () => (
     <div>
         {/* outher section */}
         <hr className="hr" />
-        <div id="album" className="container section">
+        <div id="album" className="container mt-4">
             <div className="shadow-sm rounded card mb-3">
             <h3 className="card-header">Post</h3>
             <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
