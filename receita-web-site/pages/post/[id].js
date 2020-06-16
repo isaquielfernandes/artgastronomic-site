@@ -14,7 +14,7 @@ const Receita = ( { receita } ) => {
       <Container>
         
             { receita.map((p) => (
-              <div key={p.sys.id} className="container mt-5 py-5">
+              <div key={p.sys.id} className="container mt-3 py-5">
                   <div className="row">
                       <div className="col-10 mx-auto text-center my-5 text-info">
                         <h3>
@@ -31,6 +31,7 @@ const Receita = ( { receita } ) => {
                     <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
                       <p className="text-muted lead">{p.fields.descricao}</p>
                       <div className="text-muted">
+                          <hr/>
                           <Date dateString={p.sys.createdAt} />
                       </div>
                     </div>
