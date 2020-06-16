@@ -30,9 +30,9 @@ const Receita = ( { receita } ) => {
                     </div>
                     <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
                       <p className="text-muted lead">{p.fields.descricao}</p>
-                    </div>
-                    <div className="text-muted">
+                      <div className="text-muted">
                           <Date dateString={p.sys.createdAt} />
+                      </div>
                     </div>
                   </div>
               </div>
