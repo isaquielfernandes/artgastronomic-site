@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 import { client } from '../../lib/api';
 import ErrorPage from 'next/error';
 import Container from '../../components/Container';
@@ -12,14 +13,20 @@ const Receita = ( { receita } ) => {
 
     return (
       <Container>
+            <Head>
+                <link
+                    href="https://fonts.googleapis.com/css?family=Oswald|Permanent+Marker"
+                    rel="stylesheet"
+                />
+            </Head>
         
             { receita.map((p) => (
-              <div key={p.sys.id} className="container mt-3 py-5">
+              <div key={p.sys.id} className="container mt-1 py-5">
                   <div className="row">
                       <div className="col-10 mx-auto text-center my-5 text-info">
-                        <h3>
+                        <h1 className="font-weight-bold">
                           {p.fields.nome}
-                        </h3>
+                        </h1>
                       </div>
                   </div>
                   <div className="row">
