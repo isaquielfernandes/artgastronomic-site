@@ -12,32 +12,31 @@ const Receita = ( { receita } ) => {
 
     return (
       <Container>
-        <div className="container mg-t-15">
-          <div className="row">
-            <div className="col-md-9 offset-md-0">
+        
             { receita.map((p) => (
-              <div key={p.sys.id} className="card">
-                  <div className="card-header text-info">
-                    <h3>
-                      {p.fields.nome}
-                    </h3>
+              <div key={p.sys.id} className="container mt-5 py-5">
+                  <div className="row">
+                      <div className="col-10 mx-auto text-center my-5 text-info">
+                        <h3>
+                          {p.fields.nome}
+                        </h3>
+                      </div>
                   </div>
-                  <img
-                      src={p.fields.image.fields.file.url}
-                      alt={p.fields.nome}
-                      className="card-img-top rounded-0" alt={p.fields.nome}
-                    />
-                  <div className="card-body">
-                    <div>{p.fields.descricao}</div>
-                  </div>
-                  <div className="card-footer text-muted">
-                      <Date dateString={p.sys.createdAt} />
+                  <div className="row">
+                    <div className="col-10 mx-auto col-md-6 my-3">
+                        <img src={p.fields.image.fields.file.url} alt={p.fields.nome}
+                            className="card-img-top rounded-0" alt={p.fields.nome}
+                        />
+                    </div>
+                    <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
+                      <p className="text-muted lead">{p.fields.descricao}</p>
+                    </div>
+                    <div className="text-muted">
+                          <Date dateString={p.sys.createdAt} />
+                    </div>
                   </div>
               </div>
               ))}
-            </div>
-          </div>
-        </div>
       </Container>
     );
 };
