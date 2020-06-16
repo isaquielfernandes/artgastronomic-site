@@ -3,6 +3,7 @@
 :root {
   --primarycolor: #55710B;
   --primary-secund: #f09d51;
+  --mainWhite: #f3f3f3;
   --main-white: #fff;
   --main-black: #222;
   --main-grey: #ececec;
@@ -20,7 +21,8 @@
 
 body {
   color: var(--main-black);
-  background: var(--main-white);
+  font-family:  'Alegreya', sans-serif !important;
+  background: var(--mainWhite) !important;
   padding-top: 56px;
 }
 
