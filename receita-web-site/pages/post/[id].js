@@ -14,10 +14,7 @@ const Receita = ( { receita } ) => {
     return (
       <Container>
             <Head>
-                <link
-                    href="https://fonts.googleapis.com/css?family=Oswald|Permanent+Marker"
-                    rel="stylesheet"
-                />
+               <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
             </Head>
         
             { receita.map((p) => (
