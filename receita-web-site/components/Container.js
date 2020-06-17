@@ -7,7 +7,7 @@ const Container = (prosps) => (
     <div>
         <Meta/>
         <Navigation/>
-          <div className="py-4">
+          <div className="">
               {prosps.children}
           </div>
         <Contacto/>
