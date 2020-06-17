@@ -22,7 +22,7 @@
 
 body {
   color: var(--main-black);
-  font-family:  'Alegreya', sans-serif !important;
+  font-family:  'Alegreya', serif !important;
   background: var(--mainWhite) !important;
   padding-top: 56px;
 }
