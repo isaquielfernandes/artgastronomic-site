@@ -49,7 +49,7 @@ const  Index = (props) => {
               </Head>
               <Banner/>
               <MainSection>
-              <div className="col-sm-12 col-md-12 col-lg-9 mb-2 my-5 my-sm-3">
+              <div className="col-sm-12 col-md-12 col-lg-9 my-5 my-sm-3">
                   <section className="receita-section">
                     <div className="px-0">
                       <CardHeaderPost>
