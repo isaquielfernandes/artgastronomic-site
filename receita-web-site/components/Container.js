@@ -2,13 +2,14 @@ import Navigation from "./Navigation";
 import Contacto from "./Contacto";
 import Meta from "./Meta";
 import Footer from "./Footer";
-import MainSection from "./MainSection";
 
 const Container = (prosps) => (
     <div>
         <Meta/>
         <Navigation/>
-          {prosps.children}
+          <div className="py-4">
+              {prosps.children}
+          </div>
         <Contacto/>
         <Footer/>
     </div>

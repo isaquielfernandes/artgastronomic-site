@@ -1,8 +1,8 @@
 
 const CardHeaderPost = ({children}) => (
-    <div className="card-header">
+    <div className="">
         <header className="p-fluid">
-            <h5 className="text-info font-weight-bold">Receitas</h5>
+            <h2 className="font-weight-bold">Receitas</h2>
             <hr/>   
             {children}     
         </header>                      

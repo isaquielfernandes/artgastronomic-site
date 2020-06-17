@@ -49,18 +49,20 @@ const  Index = (props) => {
               </Head>
               <Banner/>
               <MainSection>
-              <div className="col-sm-12 col-md-12 col-lg-9 mb-2">
+              <div className="col-sm-12 col-md-12 col-lg-9 mb-2 my-5">
                   <section className="receita-section">
-                    <div className="card">
+                    <div className="px-0">
                       <CardHeaderPost>
                           <Dropdown pageLinkSize={3} value={categoria} options={categorias} onChange={onCategoriaChange} className="mb-3 d-lg-none" editable={false} placeholder="Selecione uma Categoria" />
                       </CardHeaderPost>
-                      <div className="card-body p-2">
+                      <div className="">
                         <Post posts = { posts } loading={ loading } />
                       </div>
-                      <div className="card-footer">
-                        <Paginator first={first} rows={rows} totalRecords={total}  onPageChange={onPageChange}></Paginator>   
-                      </div>           
+                      <div className="">
+                        { posts.length > 0 ? (
+                            <Paginator first={first} rows={rows} totalRecords={total}  onPageChange={onPageChange}></Paginator>   
+                        ) : null}
+                      </div>        
                     </div>
                   </section>
               </div>

@@ -13,7 +13,7 @@ const  Post = ({ posts, loading }) => {
     }
    
     return (
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 px-2 clearfix grid" >
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 clearfix grid" >
             { posts.map((p) => (
                 <article key={p.sys.id} className="col mb-3 px-sm-2 grid-item">
                     <div id={p.fields.categoria} className="card rounded-0 h-100 img-container" >
