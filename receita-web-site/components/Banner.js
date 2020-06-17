@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const Banner = () => (
-    <div className="social-media">
+    <div className="social-media mt-0">
         <div className="container">
             <div className="row info-social">
                 <div className="col-sm-12 col-md-4 col-lg-4 text-center">
