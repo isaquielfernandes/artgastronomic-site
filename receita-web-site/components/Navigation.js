@@ -17,11 +17,11 @@ const Navigation = () => {
                     ArtGastronomic
                 </a>
             </Link>
-            <button className="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                  <span className="navbar-toggler-icon" />
             </button>
 
-            <div className="navbar-collapse offcanvas-collapse" id="navbarContent">    
+            <div className="collapse navbar-collapse" id="navbarContent">    
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                     <Link href="/index">

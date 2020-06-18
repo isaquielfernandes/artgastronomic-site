@@ -172,10 +172,11 @@ p .btn-group .btn-secondary {
 }
 
 /* navigation */
+/*
 @media (max-width: 991.98px) {
   .offcanvas-collapse {
     position: fixed;
-    top: 56px; /* Height of navbar */
+    top: 56px;
     bottom: 0;
     left: 100%;
     width: 148px;
@@ -201,7 +202,7 @@ p .btn-group .btn-secondary {
     opacity: 1;
     border: 1px solid #6c757d;
   }
-}
+}*/
 
 .nav-scroller {
   position: relative;
