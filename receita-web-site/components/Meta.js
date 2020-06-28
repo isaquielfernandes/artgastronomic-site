@@ -6,7 +6,6 @@ const Meta = () => (
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
             <meta name="description" content="Site de receitas"/>
             <meta name="robots" content="index" />
-            
 
             <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png"/>
             <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png"/>
@@ -24,14 +23,7 @@ const Meta = () => (
             <link rel="manifest" href="/favicon/manifest.json"/>
             <meta name="msapplication-TileColor" content="#ffffff"/>
             <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png"/>
-            <meta name="theme-color" content="#ffffff"></meta>
-
-            <script type="application/ld+json">
-                {{
-                    "@context": "http://schema.org/",
-                    "@type": "Receita"
-                }}
-            </script>
+            <meta name="theme-color" content="#ffffff" />
 
             <script src="https://unpkg.com/scrollreveal"></script>
             
