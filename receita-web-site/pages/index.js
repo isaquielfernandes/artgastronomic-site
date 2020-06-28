@@ -45,7 +45,7 @@ const  Index = (props) => {
   return (
           <Container>
               <Head>
-                  <title>Home - Art Gastronomic</title>
+                  <title>Receita blog - Art Gastronomic</title>
               </Head>
               <Banner/>
               <MainSection>
