@@ -13,16 +13,16 @@ const  Post = ({ posts, loading }) => {
     }
    
     return (
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 clearfix" >
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 clearfix" itemscope itemtype="http://schema.org/Receita">
             { posts.map((p) => (
                 <article key={p.sys.id} className="col mx-auto mb-3 px-sm-2">
                     <div id={p.fields.categoria} className="card rounded-0 h-100 img-container" >
-                        <img src={p.fields.image.fields.file.url} className="card-img-top img-fluid rounded-0" alt="receita-img" />
+                        <img src={p.fields.image.fields.file.url} className="card-img-top img-fluid rounded-0" alt="receita-img" itemprop="image"/>
                         <button className="rounded-left btn-ver-receita" onClick={() => Router.push(`/post/[id]`, `/post/${p.sys.id}`)}>
                             Ver Receita <i className="fa fa-cutlery" aria-hidden="true"></i>
                         </button>
                         <div className="card-body p-2">
-                            <h5 className="font-weight-lighter text-truncate">{p.fields.nome}</h5>
+                            <h5 className="font-weight-lighter text-truncate" itemprop="name">{p.fields.nome}</h5>
                         </div>
                     </div>
                 </article>
