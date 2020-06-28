@@ -27,10 +27,10 @@ const Meta = () => (
             <meta name="theme-color" content="#ffffff"></meta>
 
             <script type="application/ld+json">
-                {
+                {{
                     "@context": "http://schema.org/",
                     "@type": "Receita"
-                }
+                }}
             </script>
 
             <script src="https://unpkg.com/scrollreveal"></script>
