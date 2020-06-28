@@ -26,6 +26,13 @@ const Meta = () => (
             <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png"/>
             <meta name="theme-color" content="#ffffff"></meta>
 
+            <script type="application/ld+json">
+                {
+                    "@context": "http://schema.org/",
+                    "@type": "Receita"
+                }
+            </script>
+
             <script src="https://unpkg.com/scrollreveal"></script>
             
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"/>
