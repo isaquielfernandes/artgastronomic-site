@@ -13,6 +13,9 @@ const Receita = ( { receita } ) => {
 
     return (
       <Container>
+            <Head>
+                <title>Receita</title>
+            </Head>
             { receita.map((p) => (
               <div key={p.sys.id} className="container mt-0">
                   <div className="row">
