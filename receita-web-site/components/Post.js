@@ -19,7 +19,7 @@ const  Post = ({ posts, loading }) => {
                     <div id={p.fields.categoria} className="card rounded-0 h-100 img-container" >
                         <img src={p.fields.image.fields.file.url} className="card-img-top img-fluid rounded-0" alt={p.fields.nome}/>
                         <Link className="rounded-left btn-ver-receita" href="/post/[id]" as={`/post/${p.sys.id}`}>
-                            Ver Receita <i className="fa fa-cutlery" aria-hidden="true"></i>
+                            <a>Ver Receita <i className="fa fa-cutlery" aria-hidden="true"></i></a>
                         </Link>
                         <div className="card-body p-2">
                             <h5 className="font-weight-lighter text-truncate">{p.fields.nome}</h5>
