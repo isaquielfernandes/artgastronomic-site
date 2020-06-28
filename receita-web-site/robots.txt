@@ -1,3 +1,0 @@
-Sitemap: https://artgastronomic.now.sh/sitemap.xml
-User-agent:*
-Disallow:
