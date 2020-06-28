@@ -4,7 +4,7 @@ import Meta from "./Meta";
 import Footer from "./Footer";
 
 const Container = (prosps) => (
-    <div>
+    <>
         <Meta/>
         <Navigation/>
           <div className="">
@@ -12,7 +12,7 @@ const Container = (prosps) => (
           </div>
         <Contacto/>
         <Footer/>
-    </div>
+    </>
 );
 
 export default Container;
