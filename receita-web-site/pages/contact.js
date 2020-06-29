@@ -10,7 +10,7 @@ const Contact = () => {
       <div className="container">
       <section className="row py-5">
         <article className="col-md-6 offset-md-3">
-          <h3></h3>
+          <h1>Contato</h1>
           <form action="https://formspree.io/YOUR_ID" method="POST">
             <div className="form-group">
               <input
