@@ -38,9 +38,9 @@ const  Index = (props) => {
   };
  
   let pag = (first/rows) + 1;
-  useEffect(() => {
-    router.push({ pathname: '/', query: { page: pag, limit: rows, skip: first, categoria: categoria}, shallow: true });
-  }, [pag, rows, first, categoria]);
+  /*useEffect(() => {*/
+    Router.push({ pathname: '/', query: { page: pag, limit: rows, skip: first, categoria: categoria}, shallow: true });
+  /*}, [pag, rows, first, categoria]);*/
 
   return (
           <Container>
