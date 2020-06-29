@@ -8,7 +8,7 @@ const Contact = () => {
     <Container>
       <Head>Contatos</Head>
       <div className="container">
-      <section className="row p-5">
+      <section className="row py-5">
         <article className="col-md-6 offset-md-3">
           <h3></h3>
           <form action="https://formspree.io/YOUR_ID" method="POST">
@@ -17,13 +17,13 @@ const Contact = () => {
                 type="text"
                 name="name"
                 placeholder="name"
-                className="form-control"
+                className="form-control mb-1"
               />
               <input
                 type="email"
                 placeholder="email"
                 name="email"
-                className="form-control"
+                className="form-control mb-1"
               />
               <textarea
                 name="message"
