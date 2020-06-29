@@ -15,8 +15,8 @@ const  Post = ({ posts, loading }) => {
     return (
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 clearfix" itemtype ="http://schema.org/Receita">
             { posts.map((p) => (
-                <article key={p.sys.id} className="col mx-auto mb-3 px-sm-2 shadow-sm">
-                    <div id={p.fields.categoria} className="card rounded-0 h-100 img-container" >
+                <article key={p.sys.id} className="col mx-auto mb-3 px-sm-2">
+                    <div id={p.fields.categoria} className="card rounded-0 h-100 img-container shadow-sm" >
                         <img src={p.fields.image.fields.file.url} className="card-img-top img-fluid rounded-0" alt={p.fields.nome}/>
                         <div className="card-body p-2">
                             <h5 className="font-weight-lighter text-truncate my-3">{p.fields.nome}</h5>
