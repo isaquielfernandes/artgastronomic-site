@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
+import Router, { useRouter } from 'next/router';
 import Container from "../components/Container";
 import Head from 'next/head';
 import Footer from "../components/Footer";
@@ -33,13 +33,13 @@ const  Index = (props) => {
     setRows(event.rows);
   };
 
-  const onCategoriaChange = (e) => {
-    setCategoria(e.value);
+  const onCategoriaChange = (event) => {
+    setCategoria(event.value);
   };
  
   let pag = (first/rows) + 1;
   useEffect(() => {
-    router.push({ pathname: '/', query: { page: pag, limit: rows, skip: first, categoria: categoria} });
+    router.push({ pathname: '/', query: { page: pag, limit: rows, skip: first, categoria: categoria}, { shallow: true } });
   }, [first, rows, categoria]);
 
   return (
