@@ -37,12 +37,9 @@ const  Index = (props) => {
     setCategoria(event.value);
   };
  
-  
+  let pag = (first/rows) + 1;
   useEffect(() => {
-       setLoading(true);
-       let pag = (first/rows) + 1;
        router.push({ pathname: '/', query: { page: pag, limit: rows, skip: first, categoria: categoria}, shallow: true });
-       setLoading(false);
     }, [pag, rows, first, categoria]);
 
   return (
