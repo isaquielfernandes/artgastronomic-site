@@ -7,7 +7,8 @@ const Contact = () => {
   return (
     <Container>
       <Head>Contatos</Head>
-      <section className="row">
+      <div className="container">
+      <section className="row p-5">
         <article className="col-md-6 offset-md-3">
           <h3></h3>
           <form action="https://formspree.io/YOUR_ID" method="POST">
@@ -31,12 +32,13 @@ const Contact = () => {
                 className="form-control"
               ></textarea>
             </div>
-            <button type="submit" className="submit-btn btn">
-              submit here
+            <button type="submit" className="btn btn-outline-success">
+              Enviar<i class="fas fa-paper-plane ml-1"></i>
             </button>
           </form>
         </article>
       </section>
+      </div>
     </Container>
   )
 }
