@@ -20,7 +20,7 @@ const  Post = ({ posts, loading }) => {
                         <img src={p.fields.image.fields.file.url} className="card-img-top img-fluid rounded-0" alt={p.fields.nome}/>
                         <div className="card-body p-2">
                             <h5 className="font-weight-lighter text-truncate">{p.fields.nome}</h5>
-                             <Link className="btn btn-outline-warning btn-ver-receita" href="/post/[id]" as={`/post/${p.sys.id}`}>
+                             <Link className="btn btn-outline-warning my-2" href="/post/[id]" as={`/post/${p.sys.id}`}>
                                 <a>Ver Receita <i className="fa fa-cutlery" aria-hidden="true"></i></a>
                              </Link>
                         </div>
