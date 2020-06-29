@@ -20,7 +20,7 @@ const Receita = ( { receita } ) => {
             { receita.map((p) => (
               <div key={p.sys.id} className="container mt-0">
                   <div className="row">
-                      <div className="col-12 mx-auto text-center my-5 text-info">
+                      <div className="col-12 mx-auto text-center mt-5 mt-2 text-info">
                         <h1 className="font-weight-bold">
                           {p.fields.nome}
                         </h1>
