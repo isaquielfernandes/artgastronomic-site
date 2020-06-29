@@ -1,6 +1,6 @@
 
 const Footer = () => (
-    <div>
+    <>
         {/* footer */}
         <footer className="footer-section mt-4">
         <a className="btn btn-lg" href="https://instagram.com/chefsassyfnandes" target="_blank" role="button"><i className="fa fa-instagram" /></a>
@@ -12,7 +12,7 @@ const Footer = () => (
             Gastronomic!
         </p>
         </footer>
-    </div>
+    </>
 );
 
 export default Footer;
