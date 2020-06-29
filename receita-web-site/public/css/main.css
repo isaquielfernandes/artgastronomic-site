@@ -3,7 +3,7 @@
 
 :root {
   --primarycolor: #55710B;
-  --primary-secund: #f09d51;
+  --secundary-color: #f09d51;
   --mainWhite: #f3f3f3;
   --main-white: #fff;
   --main-black: #222;
@@ -48,7 +48,7 @@ html, body {
   position: absolute;
   top: 10%;
   right: 0;
-  background: var(--primary-secund);
+  background: var(--secundary-color);
   border: none;
   text-transform: uppercase;
   padding: 0.5rem 0.75rem;
@@ -63,7 +63,7 @@ html, body {
   color: var(--main-white);
 }
 
-.img-container:hover .btn-ver-receita {
+.img-container:hover .btn-ver-receita a {
   transform: translateX(0);
 }
 
