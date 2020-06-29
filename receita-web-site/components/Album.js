@@ -47,4 +47,11 @@ const Album = () => (
   </section>
 );
 
+Album.getInitialProps = async (ctx) => {
+  const res = await fetch('')
+  const json = await res.json()
+  return { ultimosReceitas: json.stargazers_count }
+}
+
+
 export default Album;
