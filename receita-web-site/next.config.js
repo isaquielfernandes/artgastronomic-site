@@ -18,66 +18,22 @@ module.exports = {
         )
         return config
     },
-    
-techhiveIO
-/
-nextjs-static-starter-kit
-Template
-Code
-Issues
-2
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-nextjs-static-starter-kit/next.config.js
- @abedzantout
-abedzantout chore(app): fix export functionality
- 2 contributors
-45 lines (36 sloc)  926 Bytes
-  
-// next.config.js
+    exportPathMap: async () => {
+        const articles = await generateAllArticles();
 
-const path = require('path');
-const Dotenv = require('dotenv-webpack');
-const { generateAllArticles } = require('./utils/helpers');
+        const insights = articles.reduce(
+            (pages, entry) => Object.assign({}, pages, {
+                  [`/post/${entry.id}`]: {
+                      page: '/post/[id]', query: { id: entry.id }
+                  }
+            }),{} 
+        );
 
-const next_config = {
-  webpack: (config) => {
-    config.plugins = config.plugins || [];
+        const pages = {
+           '/': { page: '/' },
+        };
 
-    config.plugins = [
-      ...config.plugins,
-      // Read the .env file
-      new Dotenv({
-        path: path.join(__dirname, '.env'),
-        systemvars: true
-      })
-    ];
-
-    return config;
-  },
-  exportPathMap: async () => {
-    const articles = await generateAllArticles();
-
-    const insights = articles.reduce(
-      (pages, entry) =>
-        Object.assign({}, pages, {
-          [`/post/${entry.id}`]: {
-            page: '/post/[id]',
-            query: { id: entry.id }
-          }
-        }),
-      {}
-    );
-
-    const pages = {
-      '/': { page: '/' },
-    };
-
-    return Object.assign({}, pages, insights);
-  }
+        return Object.assign({}, pages, insights);
+   }
 }
 
