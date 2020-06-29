@@ -12,7 +12,7 @@ const Contacto = () => (
                     <strong>Address</strong><br /><i className="fas fa-map-marker-alt" /> Setúbal, 2810-226 Almada<br /><i className="fas fa-map-marker-alt" /> Lisboa, Portugal
                 </p>
                 <p className="col-sm-12 col-md-6 col-lg-4">
-                    <strong>Contact</strong><br /><i className="fas fa-mobile-alt mr-1" />935728467<br/><i className="fas fa-phone-square-alt ml-2 mr-1" /> 945790354
+                    <strong>Contact</strong><br /><i className="fas fa-mobile-alt mr-1" />935728467<br/><i className="fas fa-phone-square-alt mr-1" /> 945790354
                      
                 </p>
                 <p className="col-sm-12 col-md-12 col-lg-4">
