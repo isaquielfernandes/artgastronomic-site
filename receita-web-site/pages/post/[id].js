@@ -35,7 +35,7 @@ const Receita = ( { receita } ) => {
                     <div className="col-12 mx-auto col-md-6 my-3 text-capitalize">
                       <p className="lead">{p.fields.descricao}</p>
                       
-                      <div className="text-muted my-1">
+                      <div className="text-muted my-1 text-right">
                           <hr/>
                           <Date dateString={p.sys.createdAt} />
                       </div>
