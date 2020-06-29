@@ -34,6 +34,9 @@ const Receita = ( { receita } ) => {
                     </div>
                     <div className="col-12 mx-auto col-md-6 my-3 text-capitalize">
                       <p className="lead">{p.fields.descricao}</p>
+                       <Link href="/">
+                           <a className="btn btn-outline-warning my-2">Voltar<i class="fas fa-arrow-circle-left" aria-hidden="true"></i></a>
+                       </Link>
                       <div className="text-muted">
                           <hr/>
                           <Date dateString={p.sys.createdAt} />
