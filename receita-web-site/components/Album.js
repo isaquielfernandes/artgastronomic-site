@@ -21,7 +21,7 @@ const Album = () => (
                                 <img src="img/img-fundo-01.jpg" className="d-block w-100 outher-img" alt="..."/>
                             </div>
                             <div className="carousel-item">
-                                <img src="img/img-fundo-02.jpg" className="d-block w-100 outher-img" alt="..."/>
+                                <img src="img/img-fundo-05.jpg" className="d-block w-100 outher-img" alt="..."/>
                             </div>
                             <div className="carousel-item">
                                 <img src="img/img-fundo-03.jpg" className="d-block w-100 outher-img" alt="..."/>
