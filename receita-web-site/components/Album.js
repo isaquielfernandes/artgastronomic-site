@@ -2,7 +2,7 @@ import Router from "next/router";
 import Frases from "./Frases";
 
 const Album = () => (
-  <div>
+  <section>
     {/* outher section */}
     <hr className="hr" />
     <div id="album" className="container mt-4">
@@ -44,7 +44,7 @@ const Album = () => (
             <Frases />
         </div>
     </div>
-  </div>
+  </section>
 );
 
 export default Album;
