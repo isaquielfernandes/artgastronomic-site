@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 import { GMap } from 'primereact/gmap';
+import GoogleMaps from "../components/GoogleMaps";
 import Container from "../components/Container";
 
 const Contact = () => {
@@ -41,7 +42,7 @@ const Contact = () => {
         </section>
         <section className="row py-5">
           <div className="col-md-4 offset-md-4">
-
+            <GoogleMaps/>
           </div>
         </section>
       </div>
