@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
+import { GMap } from 'primereact/gmap';
 import Container from "../components/Container";
 
 const Contact = () => {
@@ -37,6 +38,11 @@ const Contact = () => {
               </button>
             </form>
           </article>
+        </section>
+        <section className="row py-5">
+          <div className="col-md-4 offset-md-4">
+
+          </div>
         </section>
       </div>
     </Container>
