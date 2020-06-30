@@ -1,5 +1,5 @@
 /*global google*/
-import React, {Component} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {Link} from 'next/link';
 import {GMap} from 'primereact/gmap';
 import {Dialog} from 'primereact/dialog';
@@ -7,137 +7,134 @@ import {InputText} from 'primereact/inputtext';
 import {Button} from 'primereact/button';
 import {Checkbox} from 'primereact/checkbox';
 import {Growl} from 'primereact/growl';
+import Head from 'next/head';
 
-export default class GoogleMaps extends Component {
+const GoogleMaps = () => { 
 
-    constructor() {
-        super();
-        this.state = {
-            dialogVisible: false,
-            markerTitle: '',
-            draggableMarker: false,
-            overlays: null,
-            selectedPosition: null
-        };
+    let growl = useRef(null);
 
-        this.onMapClick = this.onMapClick.bind(this);
-        this.onOverlayClick = this.onOverlayClick.bind(this);
-        this.handleDragEnd = this.handleDragEnd.bind(this);
-        this.onMapReady = this.onMapReady.bind(this);
-        this.onHide = this.onHide.bind(this);
-        this.addMarker = this.addMarker.bind(this);
+    const [dialogVisible, setDialogVisible] = useState(false);
+    const [markerTitle, setMarkerTitle] = useState('');
+    const [draggableMarker, setDraggableMarker] = useState(false);
+    const [overlays, setOverlays] = useState(null);
+    const [selectedPosition, setSelectedPosition] = useState(null);
+
+    
+    /*const googleMapScript = document.createElement('script')
+    googleScript.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAP_API_KEY}&libraries=places`
+    window.document.body.appendChild(googleScript)
+    
+    googleScript.addEventListener('load', {
+        addMarker,
+        onMapReady
+    });*/
+    
+
+    const onMapClick = (event) => {
+            setDialogVisible(true);
+            selectedPosition(event.latLng);
     }
 
-    onMapClick(event) {
-        this.setState({
-            dialogVisible: true,
-            selectedPosition: event.latLng
-        });
-    }
-
-    onOverlayClick(event) {
+    const onOverlayClick = (event) => {
         let isMarker = event.overlay.getTitle !== undefined;
 
         if(isMarker) {
             let title = event.overlay.getTitle();
-            this.infoWindow = this.infoWindow||new google.maps.InfoWindow();
-            this.infoWindow.setContent('<div>' + title + '</div>');
-            this.infoWindow.open(event.map, event.overlay);
+            infoWindow = infoWindow||new GMap.maps.InfoWindow();
+            infoWindow.setContent('<div>' + title + '</div>');
+            infoWindow.open(event.map, event.overlay);
             event.map.setCenter(event.overlay.getPosition());
 
-            this.growl.show({severity:'info', summary:'Marker Selected', detail: title});
+            growl.show({severity:'info', summary:'Marker Selected', detail: title});
         }
         else {
-            this.growl.show({severity:'info', summary:'Shape Selected', detail: ''});
+            growl.show({severity:'info', summary:'Shape Selected', detail: ''});
         }
     }
 
-    handleDragEnd(event) {
-        this.growl.show({severity:'info', summary:'Marker Dragged', detail: event.overlay.getTitle()});
+    const handleDragEnd = (event) => {
+        growl.show({severity:'info', summary:'Marker Dragged', detail: event.overlay.getTitle()});
     }
 
-    addMarker() {
-        let newMarker = new google.maps.Marker({
+    const addMarker = () => {
+        let newMarker = new GMap.maps.Marker({
                             position: {
-                                lat: this.state.selectedPosition.lat(),
-                                lng: this.state.selectedPosition.lng()
+                                lat: selectedPosition.lat(),
+                                lng: selectedPosition.lng()
                             },
-                            title: this.state.markerTitle,
-                            draggable: this.state.draggableMarker
-                        });
-
-        this.setState({
-            overlays: [...this.state.overlays, newMarker],
-            dialogVisible: false,
-            draggableMarker: false,
-            markerTitle: ''
+                            title: markerTitle,
+                            draggable: draggableMarker
         });
+
+        setOverlays([...overlays, newMarker]);
+        setDialogVisible(false)
+        setDraggableMarker(false)
+        setMarkerTitle('');
     }
 
-    onMapReady(event) {
-        this.setState({
-            overlays: [
-                new google.maps.Marker({position: {lat: 36.879466, lng: 30.667648}, title:"Konyaalti"}),
-                new google.maps.Marker({position: {lat: 36.883707, lng: 30.689216}, title:"Ataturk Park"}),
-                new google.maps.Marker({position: {lat: 36.885233, lng: 30.702323}, title:"Oldtown"}),
-                new google.maps.Polygon({paths: [
+    const onMapReady = (event) => {
+            setOverlays([
+                /*new GMap.maps.Marker({position: {lat: 36.879466, lng: 30.667648}, title:"Konyaalti"}),
+                new GMap.maps.Polygon({paths: [
                     {lat: 36.9177, lng: 30.7854},{lat: 36.8851, lng: 30.7802},{lat: 36.8829, lng: 30.8111},{lat: 36.9177, lng: 30.8159}
-                ], strokeOpacity: 0.5, strokeWeight: 1, fillColor: '#1976D2', fillOpacity: 0.35
-                }),
-                new google.maps.Circle({center: {lat: 36.90707, lng: 30.56533}, fillColor: '#1976D2', fillOpacity: 0.35, strokeWeight: 1, radius: 1500}),
-                new google.maps.Polyline({path: [{lat: 36.86149, lng: 30.63743},{lat: 36.86341, lng: 30.72463}], geodesic: true, strokeColor: '#FF0000', strokeOpacity: 0.5, strokeWeight: 2})
-            ]
-        })
+                ], strokeOpacity: 0.5, strokeWeight: 1, fillColor: '#1976D2', fillOpacity: 0.35 }),
+                new GMap.maps.Circle({center: {lat: 36.90707, lng: 30.56533}, fillColor: '#1976D2', fillOpacity: 0.35, strokeWeight: 1, radius: 1500}),
+                new GMap.maps.Polyline({path: [{lat: 36.86149, lng: 30.63743},{lat: 36.86341, lng: 30.72463}], geodesic: true, strokeColor: '#FF0000', strokeOpacity: 0.5, strokeWeight: 2})*/
+            ]);
     }
 
-    onHide(event) {
-        this.setState({dialogVisible: false});
+    const onHide = (event) => {
+        setDialogVisible(false);
     }
 
-    render() {
-        const options = {
-            center: {lat: 36.890257, lng: 30.707417},
-            zoom: 12
-        };
+    const options = {
+        center: {lat: 36.890257, lng: 30.707417},
+        zoom: 12
+    };
 
-        const footer = <div>
-            <Button label="Yes" icon="pi pi-check" onClick={this.addMarker} />
-            <Button label="No" icon="pi pi-times" onClick={this.onHide} />
-        </div>;
+    const footer = <div>
+        <Button label="Yes" icon="pi pi-check" onClick={addMarker} />
+        <Button label="No" icon="pi pi-times" onClick={onHide} />
+    </div>;
 
         return (
-            <div>
+            <> 
+                <Head>
+                    <script 
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXZnT-f_gtrhiUe2fiz0JTka-NVuiUKqA&libraries=places">
+                    </script>
+                </Head>
                 <div className="content-section introduction">
                     <div className="feature-intro">
                         <h1>GMap</h1>
-                        <p>GMap component provides integration with Google Maps API. This sample demontrates
-                        various uses cases like binding, overlays and events. Click the map to add a new item.</p>
+                        <p></p>
                     </div>
                 </div>
 
                 <div className="content-section implementation">
-                    <Growl ref={(el) => { this.growl = el; }}></Growl>
+                    <Growl ref={(el) => { growl = el; }}></Growl>
 
-                    <GMap overlays={this.state.overlays} options={options} style={{width: '100%', minHeight: '320px'}} onMapReady={this.onMapReady}
-                        onMapClick={this.onMapClick} onOverlayClick={this.onOverlayClick} onOverlayDragEnd={this.handleDragEnd} />
+                    <GMap overlays={overlays} options={options} style={{width: '100%', minHeight: '320px'}} onMapReady={onMapReady}
+                        onMapClick={onMapClick} onOverlayClick={onOverlayClick} onOverlayDragEnd={handleDragEnd} />
 
-                    <Dialog header="New Location" visible={this.state.dialogVisible} width="300px" modal={true} footer={footer} onHide={this.onHide}>
+                    <Dialog header="New Location" visible={dialogVisible} width="300px" modal={true} footer={footer} onHide={onHide}>
                         <div className="p-grid p-fluid">
                             <div className="p-col-2" style={{paddingTop:'.75em'}}><label htmlFor="title">Label</label></div>
-                            <div className="p-col-10"><InputText type="text" id="title" value={this.state.markerTitle} onChange={(e) => this.setState({markerTitle: e.target.value})} /></div>
+                            <div className="p-col-10"><InputText type="text" id="title" value={markerTitle} onChange={(e) => setMarkerTitle(e.target.value)} /></div>
 
                             <div className="p-col-2" style={{paddingTop:'.75em'}}>Lat</div>
-                            <div className="p-col-10"><InputText readOnly value={this.state.selectedPosition ? this.state.selectedPosition.lat() : ''} /></div>
+                            <div className="p-col-10"><InputText readOnly value={selectedPosition ? selectedPosition.lat() : ''} /></div>
 
                             <div className="p-col-2" style={{paddingTop:'.75em'}}>Lng</div>
-                            <div className="p-col-10"><InputText readOnly value={this.state.selectedPosition ? this.state.selectedPosition.lng() : ''} /></div>
+                            <div className="p-col-10"><InputText readOnly value={selectedPosition ? selectedPosition.lng() : ''} /></div>
 
                             <div className="p-col-2" style={{paddingTop:'.75em'}}><label htmlFor="drg">Drag</label></div>
-                            <div className="p-col-10"><Checkbox checked={this.state.draggableMarker} onChange={(event) => this.setState({draggableMarker: event.checked})}/></div>
+                            <div className="p-col-10"><Checkbox checked={draggableMarker} onChange={(event) => setDraggableMarker(event.checked)}/></div>
                         </div>
                     </Dialog>
                 </div>
-            </div>
+            </>
         );
-    }
 }
+
+export default GoogleMaps;

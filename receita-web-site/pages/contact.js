@@ -35,14 +35,12 @@ const Contact = () => {
                 ></textarea>
               </div>
               <button type="submit" className="btn btn-outline-success">
-                Enviar<i class="fas fa-paper-plane ml-1"></i>
+                Enviar<i className="fas fa-paper-plane ml-1"></i>
               </button>
             </form>
           </article>
-        </section>
-        <section className="row py-5">
-          <div className="col-md-4 offset-md-4">
-            <GoogleMaps/>
+          <div className="col-md-8">
+              <GoogleMaps/>
           </div>
         </section>
       </div>
