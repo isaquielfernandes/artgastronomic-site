@@ -34,7 +34,7 @@ const Contact = () => {
                   className="form-control"
                 ></textarea>
               </div>
-              <button type="submit" className="btn btn-outline-success">
+              <button type="submit" className="btn btn-outline-success mb-3">
                 Enviar<i className="fas fa-paper-plane ml-1"></i>
               </button>
             </form>
