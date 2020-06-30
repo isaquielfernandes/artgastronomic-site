@@ -9,7 +9,7 @@ const Contact = () => {
       <Head>Contatos</Head>
       <div className="container">
         <section className="row py-5">
-          <article className="col-md-4 offset-md-4">
+          <article className="col-md-4">
             <h1 className="mb-3">Contato</h1>
             <form action="https://formspree.io/mrgyarbl" method="POST">
               <div className="form-group">
