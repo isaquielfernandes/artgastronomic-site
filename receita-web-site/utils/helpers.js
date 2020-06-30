@@ -13,12 +13,11 @@ const CONTENT_TYPE_BLOGPOST = 'receitaPost';
 
 const getAllArticles = async () => {
   return await client.getEntries({
-    content_type: CONTENT_TYPE_BLOGPOST,
-    select: 'fields.nome,fields.categoria'
+    content_type: CONTENT_TYPE_BLOGPOST
   });
 };
 
 exports.generateAllArticles = async () => {
   const articles = await getAllArticles();
-  return articles.items.map((item) => ({ ...item.fields }));
+  return articles.items.map((item) => ({ ...item.fields, ...item.sys }));
 };
