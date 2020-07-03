@@ -3,7 +3,7 @@ import Link from "next/link";
 const Banner = () => (
     <div className="social-media mt-0">
         <div className="container">
-            <div className="row info-social">
+            <div className="row info-social jumbotron">
                 <div className="col-sm-12 col-md-4 col-lg-4 text-center">
                     <h3 className="display-6 display-sm-12 text-center" style={{color: '#FD281A', opacity: 1}}>Chef Sassy Fernandes</h3>
                     <p className="text-center text-info"><b>Receitas Novas Todas As Semanas</b></p>
