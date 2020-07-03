@@ -9,7 +9,7 @@ const Footer = () => (
             <a className="btn btn-lg" href="https://facebook.com/chfsassy/" target="_blank" role="button" rel="noreferrer noopener">
                 <i className="fa fa-facebook" />
             </a>
-            <a className="btn btn-lg" href="https://www.youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank" role="button"rel="noreferrer noopener">
+            <a className="btn btn-lg" href="https://www.youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank" role="button" rel="noreferrer noopener">
                 <i className="fa fa-youtube" />
             </a>
             <p className="copyright mt-2 pb-0">
