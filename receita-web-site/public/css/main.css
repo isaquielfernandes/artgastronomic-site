@@ -260,5 +260,6 @@ button.p-paginator-next.p-paginator-element.p-link {
   height: 48px;
   margin: 1px auto;
   align-items: center;
+  vertical-align: middle;
 }
 
