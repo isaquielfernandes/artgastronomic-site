@@ -1,4 +1,7 @@
 const webpack = require('webpack');
+const withPWA = require('next-pwa')
+ 
+
 require('dotenv').config()
 const { generateAllArticles } = require('./utils/helpers');
 
@@ -18,6 +21,11 @@ module.exports = {
         )
         return config
     },
+    withPWA: () => ({
+        pwa: {
+            dest: 'public'
+        }
+    }),
     exportPathMap: async () => {
         const articles = await generateAllArticles();
 
