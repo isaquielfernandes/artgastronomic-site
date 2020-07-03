@@ -251,7 +251,12 @@ p .btn-group .btn-secondary {
 .lh-125 { line-height: 1.25; }
 .lh-150 { line-height: 1.5; }
 
-button.p-paginator-element{
+button.p-paginator-first.p-paginator-element.p-link.p-disabled,
+button.p-paginator-prev.p-paginator-element.p-link.p-disabled,
+button.p-paginator-page.p-paginator-element.p-link.p-highlight,
+button.p-paginator-page.p-paginator-element.p-link,
+button.p-paginator-last.p-paginator-element.p-link,
+button.p-paginator-next.p-paginator-element.p-link {
   width: 48px;
   height: 48px;
 }
