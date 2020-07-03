@@ -10,15 +10,15 @@ const Banner = () => (
                     <p className="lead">
                     </p>
                     <div className="btn-group" role="group">
-                        <a className="btn btn-secondary border border-danger text-uppercase" href="https://youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank" rel="noreferrer"><i className="mr-2 fa fa-youtube-play" aria-hidden="true" /> Inscreva-se</a>
+                        <a className="btn btn-secondary border text-uppercase" href="https://youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank" rel="noreferrer"><i className="mr-2 fa fa-youtube-play" aria-hidden="true" /> Inscreva-se</a>
                     </div>
                     <p />
                 </div>
                 <div className="col-sm-12 col-md-8 col-lg-8">
                     <div className="float-right social-media-links">
-                        <a className="btn btn-warning border border-danger" href="https://instagram.com/chefsassyfnandes" target="_blank" rel="noreferrer noopener"><i className="fa fa-instagram" /></a>
-                        <a className="btn btn-info border border-danger ml-1" href="https://facebook.com/chfsassy/" target="_blank" rel="noreferrer noopener"><i className="fa fa-facebook" /></a>
-                        <a className="btn btn-danger border border-danger ml-1" href="https://www.youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank" rel="noreferrer"><i className="fa fa-youtube" /></a>
+                        <a className="btn btn-warning border " href="https://instagram.com/chefsassyfnandes" target="_blank" rel="noreferrer noopener"><i className="fa fa-instagram" /></a>
+                        <a className="btn btn-info border  ml-1" href="https://facebook.com/chfsassy/" target="_blank" rel="noreferrer noopener"><i className="fa fa-facebook" /></a>
+                        <a className="btn btn-danger border ml-1" href="https://www.youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank" rel="noreferrer"><i className="fa fa-youtube" /></a>
                     </div>
                     <hr />
                 </div>
