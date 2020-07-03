@@ -74,8 +74,8 @@ const GoogleMaps = () => {
 
     const onMapReady = (event) => {
             setOverlays([
-                /*new GMap.maps.Marker({position: {lat: 36.879466, lng: 30.667648}, title:"Konyaalti"}),
-                new GMap.maps.Polygon({paths: [
+                new google.maps.Marker({position: {lat: 36.879466, lng: 30.667648}, title:"Konyaalti"}),
+                /*new GMap.maps.Polygon({paths: [
                     {lat: 36.9177, lng: 30.7854},{lat: 36.8851, lng: 30.7802},{lat: 36.8829, lng: 30.8111},{lat: 36.9177, lng: 30.8159}
                 ], strokeOpacity: 0.5, strokeWeight: 1, fillColor: '#1976D2', fillOpacity: 0.35 }),
                 new GMap.maps.Circle({center: {lat: 36.90707, lng: 30.56533}, fillColor: '#1976D2', fillOpacity: 0.35, strokeWeight: 1, radius: 1500}),
