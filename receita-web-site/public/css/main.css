@@ -260,3 +260,7 @@ button.p-paginator-next.p-paginator-element.p-link {
   height: 48px;
 }
 
+body .p-paginator .p-paginator-pages .p-paginator-page {
+  height: 48px;
+}
+
