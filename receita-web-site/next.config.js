@@ -21,7 +21,7 @@ module.exports = {
         )
         return config
     },
-    withPWA: () => ({
+    withPWA: ({
         pwa: {
             dest: 'public'
         }
