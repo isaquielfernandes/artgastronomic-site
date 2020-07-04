@@ -30,7 +30,7 @@ const Navigation = () => {
                 </li>
                 <li className="nav-item">
                     <Link href="/">
-                         <a className="nav-link pl-1" href="https://www.youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank">YouTube</a>
+                         <a className="nav-link pl-1" href="https://www.youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank" rel="noreferrer noopener">YouTube</a>
                     </Link>
                 </li>
                 <li className="nav-item">
