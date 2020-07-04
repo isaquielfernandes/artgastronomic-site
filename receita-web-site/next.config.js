@@ -5,6 +5,12 @@ const withPWA = require('next-pwa')
 require('dotenv').config()
 const { generateAllArticles } = require('./utils/helpers');
 
+module.exports = withPWA({
+  pwa: {
+    dest: 'public'
+  }
+});
+
 module.exports = {
     env: {
         NEXT_CMS_CONTENTFUL_SPACE_ID:
