@@ -7,7 +7,9 @@ const { generateAllArticles } = require('./utils/helpers');
 
 module.exports = withPWA({
   pwa: {
-    dest: 'public'
+    register: true,
+    scope: '/app',
+    sw: 'service-worker.js',
   }
 });
 
