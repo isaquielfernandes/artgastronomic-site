@@ -88,13 +88,12 @@ html, body {
 
 .info-social {
   background-color: rgb(250, 235, 235);
-  border-radius: 2.5rem;
+  border-radius: 2.2rem;
   padding: 12px;
-  opacity: .95;
   z-index: 2;
 }
 
-.info-social>p {
+.info-social p {
   font-size: 16px;
 }
 
