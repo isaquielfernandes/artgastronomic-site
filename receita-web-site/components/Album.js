@@ -18,13 +18,13 @@ const Album = () => (
                         </ol>
                         <div className="carousel-inner">
                             <div className="carousel-item active">
-                                <img src="img/img-fundo-01.jpg" className="d-block w-100 outher-img" alt="..."/>
+                                <img src="img/img-fundo-01.jpg" className="img-fluid d-block w-100 outher-img" alt="..."/>
                             </div>
                             <div className="carousel-item">
-                                <img src="img/img-fundo-05.jpg" className="d-block w-100 outher-img" alt="..."/>
+                                <img src="img/img-fundo-05.jpg" className="img-fluid d-block w-100 outher-img" alt="..."/>
                             </div>
                             <div className="carousel-item">
-                                <img src="img/img-fundo-03.jpg" className="d-block w-100 outher-img" alt="..."/>
+                                <img src="img/img-fundo-03.jpg" className="img-fluid d-block w-100 outher-img" alt="..."/>
                             </div>
                         </div>
                         <a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
