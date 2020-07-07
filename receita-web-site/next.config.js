@@ -1,17 +1,8 @@
 const webpack = require('webpack');
-const withPWA = require('next-pwa')
- 
+const withPWA = require('next-pwa');
 
 require('dotenv').config()
 const { generateAllArticles } = require('./utils/helpers');
-
-module.exports = withPWA({
-  pwa: {
-    register: true,
-    scope: '/app',
-    sw: 'service-worker.js',
-  }
-});
 
 module.exports = {
     env: {
@@ -31,7 +22,9 @@ module.exports = {
     },
     withPWA: ({
         pwa: {
-            dest: 'public'
+            register: true,
+            scope: '/app',
+            sw: 'service-worker.js',
         }
     }),
     exportPathMap: async () => {
