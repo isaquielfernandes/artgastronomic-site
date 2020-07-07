@@ -6,6 +6,34 @@ import ErrorPage from 'next/error';
 import Container from '../../components/Container';
 import Date from '../../components/Data';
 
+import { motion } from "framer-motion";
+
+let easing = [0.6, -0.05, 0.01, 0.99];
+
+const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.05
+    }
+  }
+};
+
+const fadeInUp = {
+  initial: {
+    y: 60,
+    opacity: 0,
+    transition: { duration: 0.6, ease: easing }
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: easing
+    }
+  }
+};
+
 
 const Receita = ( { receita } ) => {
 
@@ -18,7 +46,7 @@ const Receita = ( { receita } ) => {
                 <title>Receita</title>
             </Head>
             { receita.map((p) => (
-              <div key={p.sys.id} className="container mt-0">
+              <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }} key={p.sys.id} className="container mt-0">
                   <div className="row">
                       <div className="col-12 mx-auto text-center mt-5 mt-2 text-info">
                         <h1 className="font-weight-bold">
@@ -26,7 +54,7 @@ const Receita = ( { receita } ) => {
                         </h1>
                       </div>
                   </div>
-                  <div className="row">
+                  <motion.div variants={stagger} className="row">
                     <div className="col-12 mx-auto col-md-6 my-3">
                         <img src={p.fields.image.fields.file.url} alt={p.fields.nome}
                             className="card-img-top rounded-0" alt={p.fields.nome}
@@ -44,8 +72,8 @@ const Receita = ( { receita } ) => {
                               <a className="btn btn-outline-danger my-2">Voltar<i class="fas fa-arrow-circle-left ml-1" aria-hidden="true"></i></a>
                           </Link>
                       </div>
-                    </div>
-                  </div>
+                    </motion.div>
+                  </motion.div>
               </div>
               ))}
       </Container>
