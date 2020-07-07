@@ -22,7 +22,7 @@ const  Post = ({ posts, loading }) => {
                             <h5 className="font-weight-lighter text-truncate my-3">{p.fields.nome}</h5>
                              
                         </div>
-                        <div className="card-footer text-muted">
+                        <div className="card-footer">
                             <Link href="/post/[id]" as={`/post/${p.sys.id}`}>
                                 <a className="btn btn-outline-warning p-button-raised my-2">Ver Receita <i className="fa fa-cutlery" aria-hidden="true"></i></a>
                              </Link>
