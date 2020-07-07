@@ -15,13 +15,17 @@ const Contact = () => {
             <h1 className="mb-3">Contato</h1>
             <form action="https://formspree.io/mrgyarbl" method="POST">
               <div className="form-group">
+                <label id="name"></label>
                 <input
+                  for="name"
                   type="text"
                   name="name"
                   placeholder="name"
                   className="form-control mb-1"
                 />
+                <label id="email"></label>
                 <input
+                  for="email"
                   type="email"
                   placeholder="email"
                   name="email"
