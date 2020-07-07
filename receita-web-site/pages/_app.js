@@ -10,4 +10,5 @@ export default function App({ Component, pageProps }) {
         <AnimatePresence exitBeforeEnter>
            <Component {...pageProps} />
         </AnimatePresence>
+   )
 }
