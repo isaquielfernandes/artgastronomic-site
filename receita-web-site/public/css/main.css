@@ -254,13 +254,11 @@ button.p-paginator-next.p-paginator-element.p-link {
   width: 48px;
   height: 48px;
   margin: auto 1px;
-  align-items: center;
-  vertical-align: middle;
 }
 
-button .p-highlight,
-button .p-link {
+.p-paginator-pages {
   height: 48px;
+  width: 48px;
 }
 
 .message {
