@@ -16,7 +16,7 @@ const Banner = () => (
                 </div>
                 <div className="col-sm-12 col-md-8 col-lg-8">
                     <div className="float-right social-media-links">
-                        <a className="p-button-warning p-button-raised " href="https://instagram.com/chefsassyfnandes" target="_blank" rel="noreferrer noopener"><i className="fa fa-instagram" /></a>
+                        <a className="p-button-warning" href="https://instagram.com/chefsassyfnandes" target="_blank" rel="noreferrer noopener"><i className="fa fa-instagram" /></a>
                         <a className="p-button-info p-button-raised ml-1" href="https://facebook.com/chfsassy/" target="_blank" rel="noreferrer noopener"><i className="fa fa-facebook" /></a>
                         <a className="p-button-danger p-button-raised ml-1" href="https://www.youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank" rel="noreferrer"><i className="fa fa-youtube" /></a>
                     </div>
