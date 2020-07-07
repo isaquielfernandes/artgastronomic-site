@@ -60,7 +60,7 @@ const  Index = (props) => {
                       </div>
                       <div className="">
                         { posts.length > 0 ? (
-                            <Paginator first={first} rows={rows} totalRecords={total}  onPageChange={onPageChange}></Paginator>   
+                            <Paginator first={first} rows={rows} totalRecords={total}  onPageChange={onPageChange} className="p-align-center"/>   
                         ) : null}
                       </div>        
                     </div>
