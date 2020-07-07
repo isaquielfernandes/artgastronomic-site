@@ -72,9 +72,9 @@ const Receita = ( { receita } ) => {
                               <a className="btn btn-outline-danger my-2">Voltar<i class="fas fa-arrow-circle-left ml-1" aria-hidden="true"></i></a>
                           </Link>
                       </div>
-                    </motion.div>
+                    </div>
                   </motion.div>
-              </div>
+              </motion.div>
               ))}
       </Container>
     );
