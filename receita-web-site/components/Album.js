@@ -36,7 +36,7 @@ const Album = () => (
                             <span className="sr-only">Next</span>
                         </a>
                     </div>
-                    <div className="card-footer text-muted">
+                    <div className="card-footer">
                         2 days ago
                     </div>
                 </div>
