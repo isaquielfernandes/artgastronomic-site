@@ -15,6 +15,39 @@ import { Dropdown } from 'primereact/dropdown';
 import { ListBox } from 'primereact/listbox';
 import { Paginator } from 'primereact/paginator';
 
+import { motion } from "framer-motion";
+
+// Our custom easing
+let easing = [0.6, -0.05, 0.01, 0.99];
+
+// animate: defines animation
+// initial: defines initial state of animation or stating point.
+// exit: defines animation when component exits
+
+// Custom variant
+const fadeInUp = {
+  initial: {
+    y: 60,
+    opacity: 0,
+    transition: { duration: 0.6, ease: easing }
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: easing
+    }
+  }
+};
+
+const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
 
 const  Index = (props) => {
 
@@ -43,7 +76,7 @@ const  Index = (props) => {
     }, [pag, rows, first, categoria]);
 
   return (
-          <Container>
+          <motion.Container initial='initial' animate='animate' exit={{ opacity: 0 }}>
               <Head>
                   <title>Receita blog - Art Gastronomic</title>
               </Head>
@@ -58,11 +91,11 @@ const  Index = (props) => {
                       <div className="">
                         <Post posts = { posts } loading={ loading } />
                       </div>
-                      <div className="">
+                      
                         { posts.length > 0 ? (
                             <Paginator first={first} rows={rows} totalRecords={total}  onPageChange={onPageChange} className="p-align-center"/>   
                         ) : null}
-                      </div>        
+                            
                     </div>
                   </section>
               </div>
@@ -73,7 +106,7 @@ const  Index = (props) => {
               
               </MainSection>
               <Album/>
-          </Container>
+          </motion.Container>
   )
 };
 
