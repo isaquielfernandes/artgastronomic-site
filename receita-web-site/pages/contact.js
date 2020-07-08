@@ -46,7 +46,7 @@ const Contact = () => {
             </form>
           </article>
           <div className="col-md-8">
-              </>
+              
           </div>
         </section>
       </div>
