@@ -76,13 +76,13 @@ const  Index = (props) => {
     }, [pag, rows, first, categoria]);
 
   return (
-          <motion.Container initial='initial' animate='animate' exit={{ opacity: 0 }}>
+          <Container>
               <Head>
                   <title>Receita blog - Art Gastronomic</title>
               </Head>
               <Banner/>
               <MainSection>
-              <div className="col-sm-12 col-md-12 col-lg-9 mt-5 mb-2">
+              <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }} className="col-sm-12 col-md-12 col-lg-9 mt-5 mb-2">
                   <section className="receita-section">
                     <div className="px-0">
                       <CardHeaderPost>
@@ -98,7 +98,7 @@ const  Index = (props) => {
                             
                     </div>
                   </section>
-              </div>
+              </motion.div>
            
               <PanelCategoria>
                   <ListBox value={categoria} options={categorias} onChange={ onCategoriaChange } />
@@ -106,7 +106,7 @@ const  Index = (props) => {
               
               </MainSection>
               <Album/>
-          </motion.Container>
+          </Container>
   )
 };
 
