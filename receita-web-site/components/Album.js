@@ -7,7 +7,7 @@ const Album = () => (
     <hr className="hr" />
     <div id="album" className="container mt-4">
         <div className="row">
-            <div className="col-12 col-lg-7 mx-auto">
+            <div className="col-12 col-lg-7">
                 <div className="shadow-sm rounded card my-2">
                     <h3 className="card-header">Post Recentes</h3>
                     <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
