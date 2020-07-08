@@ -15,7 +15,7 @@ const Contact = () => {
             <h1 className="mb-3">Contato</h1>
             <form action="https://formspree.io/mrgyarbl" method="POST">
               <div className="form-group">
-                <label id="name"></label>
+                <label id="name">Name</label>
                 <input
                   for="name"
                   type="text"
@@ -23,7 +23,7 @@ const Contact = () => {
                   placeholder="name"
                   className="form-control mb-1"
                 />
-                <label id="email"></label>
+                <label id="email">Email</label>
                 <input
                   for="email"
                   type="email"
@@ -31,7 +31,9 @@ const Contact = () => {
                   name="email"
                   className="form-control mb-1"
                 />
+                <label id="message">Message</label>
                 <textarea
+                  for="message"
                   name="message"
                   rows="6"
                   placeholder="message"
@@ -44,7 +46,7 @@ const Contact = () => {
             </form>
           </article>
           <div className="col-md-8">
-              <GoogleMaps/>
+              </>
           </div>
         </section>
       </div>
