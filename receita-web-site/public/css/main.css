@@ -111,6 +111,12 @@ html, body {
   color: #fff;
 }
 
+.link-media-social {
+   background: #525252;
+   color: #fff;
+   height: 48px;
+   width: 48px:
+}
 .receita-section>.card {
   min-height: auto;
 }
