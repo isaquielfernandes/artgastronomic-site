@@ -11,7 +11,7 @@ const Banner = () => (
                        Receitas Novas Todas As Semanas
                     </b>
                     <div className="lead btn-group my-3">
-                       <a className="btn btn-danger p-button-danger p-button-raised text-uppercase" href="https://youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank" rel="noreferrer noopener"><i className="mr-2 fa fa-youtube-play" />Inscreva-se</a>
+                       <a style={{color: '#0F0F0F'}} className="btn btn-danger p-button-danger p-button-raised text-uppercase" href="https://youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank" rel="noreferrer noopener"><i className="mr-2 fa fa-youtube-play" />Inscreva-se</a>
                     </div>
                 </div>
                 <div className="col-sm-12 col-md-8 my-3">
