@@ -69,7 +69,7 @@ const Receita = ( { receita } ) => {
                       </div>
                       <div className="float-right my-3">
                           <Link href="/">
-                              <a className="btn btn-outline-danger my-2" style={{background: '#141414'}}>Voltar<i class="fas fa-arrow-circle-left ml-1" ></i></a>
+                              <a className="btn btn-outline-danger border-2 my-2" style={{background: '#141414'}}>Voltar<i class="fas fa-arrow-circle-left ml-1" ></i></a>
                           </Link>
                       </div>
                     </div>
