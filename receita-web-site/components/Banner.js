@@ -7,7 +7,7 @@ const Banner = () => (
             <div className="row info-social jumbotron">
                 <div className="col-sm-12 col-md-4 col-lg-4 text-center">
                     <h3 className="display-6 display-sm-12 text-center" style={{color: '#FD281A'}}>Chef Sassy Fernandes</h3>
-                    <b className="text-center text-white bg-dark p-2 my-2">
+                    <b className="text-center bg-dark p-2 my-2" style={{color: #0A0A0A}}>
                        Receitas Novas Todas As Semanas
                     </b>
                     <div className="lead btn-group my-3">
