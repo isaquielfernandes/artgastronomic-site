@@ -63,13 +63,13 @@ const Receita = ( { receita } ) => {
                     <div className="col-12 mx-auto col-md-6 my-3 text-capitalize">
                       <p className="lead">{p.fields.descricao}</p>
                       
-                      <div className="text-muted my-1 text-right">
+                      <div className="my-1 text-right" style={{color: '#4A4A4A'}}>
                           <hr/>
                           <Date dateString={p.sys.createdAt} />
                       </div>
                       <div className="float-right my-3">
                           <Link href="/">
-                              <a className="btn btn-outline-danger my-2">Voltar<i class="fas fa-arrow-circle-left ml-1" aria-hidden="true"></i></a>
+                              <a className="btn btn-outline-danger my-2" style={{background: '#141414'}}>Voltar<i class="fas fa-arrow-circle-left ml-1" ></i></a>
                           </Link>
                       </div>
                     </div>
