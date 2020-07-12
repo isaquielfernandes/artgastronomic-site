@@ -24,7 +24,7 @@ const  Post = ({ posts, loading }) => {
                         </div>
                         <div className="card-footer">
                             <Link href="/post/[id]" as={`/post/${p.sys.id}`}>
-                                <a className="btn btn-outline-warning p-button-raised my-2">Ver Receita <i className="fa fa-cutlery" ></i></a>
+                                <a className="btn btn-outline-warning p-button-raised my-2" style={{color: '#2E2E2E'}}>Ver Receita <i className="fa fa-cutlery" ></i></a>
                              </Link>
                         </div>
                     </div>
