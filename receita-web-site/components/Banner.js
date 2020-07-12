@@ -10,15 +10,21 @@ const Banner = () => (
                     <b className="text-center text-white bg-dark p-2 my-2">
                        Receitas Novas Todas As Semanas
                     </b>
-                    <div className="btn-group my-3" role="group">
-                       <a className="btn btn-danger p-button-raised p-button-danger p-button-raised text-uppercase" href="https://youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank" rel="noreferrer"><i className="mr-2 fa fa-youtube-play" aria-hidden="true" />Inscreva-se</a>
+                    <div className="btn-group my-3">
+                       <a className="btn p-button-danger p-button-raised text-uppercase" href="https://youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank" rel="noreferrer noopener"><i className="mr-2 fa fa-youtube-play" />Inscreva-se</a>
                     </div>
                 </div>
                 <div className="col-sm-12 col-md-8 my-3">
                     <div className="float-right social-media-links">
-                        <a className="btn btn-warning p-button-raised p-button-warning" href="https://instagram.com/chefsassyfnandes" target="_blank" rel="noreferrer noopener"><i className="fa fa-instagram" /></a>
-                        <a className="btn btn-info p-button-raised p-button-info ml-1" href="https://facebook.com/chfsassy/" target="_blank" rel="noreferrer noopener"><i className="fa fa-facebook" /></a>
-                        <a className="btn btn-danger p-button-raised p-button-danger ml-1" href="https://www.youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank" rel="noreferrer"><i className="fa fa-youtube" /></a>
+                        <a className="btn btn-warning p-button-raised p-button-warning" href="https://instagram.com/chefsassyfnandes" target="_blank" rel="noreferrer noopener"> 
+                          <i className="fa fa-instagram" />
+                        </a>
+                        <a className="btn btn-info p-button-raised p-button-info ml-1" href="https://facebook.com/chfsassy/" target="_blank" rel="noreferrer noopener"> 
+                          <i className="fa fa-facebook" />
+                        </a>
+                        <a className="btn btn-danger p-button-raised p-button-danger ml-1" href="https://www.youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank" rel="noreferrer" noopener>
+                          <i className="fa fa-youtube" />
+                        </a>
                     </div>
                     <hr />
                 </div>
