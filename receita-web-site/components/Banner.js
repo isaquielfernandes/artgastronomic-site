@@ -16,19 +16,19 @@ const Banner = () => (
                 </div>
                 <div className="col-sm-12 col-md-8 my-3">
                     <div className="float-right social-media-links">
-                        <a className="btn btn-warning p-button-raised p-button-warning" href="https://instagram.com/chefsassyfnandes" target="_blank" rel="noreferrer noopener"> 
+                        <a style={{background: '#fff'}} className="btn" href="https://instagram.com/chefsassyfnandes" target="_blank" rel="noreferrer noopener"> 
                           <i className="fa fa-instagram" />
                           <span className="sr-only">
                             Instagram
                           </span>
                         </a>
-                        <a className="btn btn-info p-button-raised p-button-info ml-1" href="https://facebook.com/chfsassy/" target="_blank" rel="noreferrer noopener"> 
+                        <a style={{background: '#fff'}} className="btn ml-1" href="https://facebook.com/chfsassy/" target="_blank" rel="noreferrer noopener"> 
                           <i className="fa fa-facebook" />
                           <span className="sr-only">
                             Facebook
                           </span>
                         </a>
-                        <a className="btn btn-danger p-button-raised p-button-danger ml-1" href="https://www.youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank" rel="noreferrer" noopener>
+                        <a style={{background: '#fff'}} className="btn ml-1" href="https://www.youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank" rel="noreferrer" noopener>
                           <i className="fa fa-youtube" />
                           <span className="sr-only">
                             YouTube
