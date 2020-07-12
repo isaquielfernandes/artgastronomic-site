@@ -22,6 +22,7 @@ const Contact = () => {
                   name="name"
                   placeholder="name"
                   className="form-control mb-1"
+                  aria-labelledby="name"
                 />
                 <label className="sr-only" id="email">Email</label>
                 <input
@@ -30,6 +31,7 @@ const Contact = () => {
                   placeholder="email"
                   name="email"
                   className="form-control mb-1"
+                  aria-labelledby="email"
                 />
                 <label className="sr-only" id="message">Message</label>
                 <textarea
@@ -38,6 +40,7 @@ const Contact = () => {
                   rows="6"
                   placeholder="message"
                   className="form-control"
+                  aria-labelledby="message"
                 ></textarea>
               </div>
               <button type="submit" style={{background: '#1C1C1C'}} className="btn btn-outline-success mb-3">
