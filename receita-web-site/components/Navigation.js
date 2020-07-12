@@ -6,7 +6,7 @@ import {Button} from 'primereact/button';
 
 
 const Navigation = () => {
-  const [visibleRight, setVisibleRight] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   return(
     <header>
@@ -43,7 +43,7 @@ const Navigation = () => {
                          <a className="nav-link pl-1">Contactos</a>
                     </Link>
                 </li>
-              </ul>
+                
             </div>
         </nav>
     </header>
