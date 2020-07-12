@@ -43,7 +43,7 @@ const Navigation = () => {
                          <a className="nav-link pl-1">Contactos</a>
                     </Link>
                 </li>
-                
+              </ul>  
             </div>
         </nav>
     </header>
