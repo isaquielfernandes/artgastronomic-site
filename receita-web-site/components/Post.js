@@ -17,7 +17,7 @@ const  Post = ({ posts, loading }) => {
             { posts.map((p) => (
                 <article key={p.sys.id} className="col mx-auto mb-3 px-sm-2">
                     <div className="card rounded-0 h-100 img-container shadow-sm" >
-                        <img src={p.fields.image.fields.file.url} className="card-img-top img-fluid rounded-0" alt=`img-${p.fields.nome}` />
+                        <img src={p.fields.image.fields.file.url} className="card-img-top img-fluid rounded-0" alt={`img-${p.fields.nome}}` />
                         <div className="card-body p-2">
                             <h3 className="text-truncate my-3">{p.fields.nome}</h3>
                              
