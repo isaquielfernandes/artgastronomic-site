@@ -19,12 +19,12 @@ const  Post = ({ posts, loading }) => {
                     <div className="card rounded-0 h-100 img-container shadow-sm" >
                         <img src={p.fields.image.fields.file.url} className="card-img-top img-fluid rounded-0" alt={p.fields.nome}/>
                         <div className="card-body p-2">
-                            <h5 className="font-weight-lighter text-truncate my-3">{p.fields.nome}</h5>
+                            <h5 className="text-truncate my-3">{p.fields.nome}</h5>
                              
                         </div>
                         <div className="card-footer">
                             <Link href="/post/[id]" as={`/post/${p.sys.id}`}>
-                                <a className="btn btn-outline-warning p-button-raised my-2">Ver Receita <i className="fa fa-cutlery" aria-hidden="true"></i></a>
+                                <a className="btn btn-outline-warning p-button-raised my-2">Ver Receita <i className="fa fa-cutlery" ></i></a>
                              </Link>
                         </div>
                     </div>
