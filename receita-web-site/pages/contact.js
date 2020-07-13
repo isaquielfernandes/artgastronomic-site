@@ -8,7 +8,9 @@ import Container from "../components/Container";
 const Contact = () => {
   return (
     <Container>
-      <Head>Contatos</Head>
+      <Head>
+          <title>Contato</title>
+      </Head>
       <div className="container">
         <section className="row py-5">
           <article className="col-md-4">
