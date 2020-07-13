@@ -34,13 +34,13 @@ const Navigation = () => {
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link href="/">
+                    <Link href="/#receita">
                         <a className="nav-link pl-1">Receitas</a>
                     </Link>
                 </li>
                 <li className="nav-item">
                     <Link href="/contact">
-                         <a className="nav-link pl-1">Contactos</a>
+                         <a className="nav-link pl-1">Contacto</a>
                     </Link>
                 </li>
               </ul>  
