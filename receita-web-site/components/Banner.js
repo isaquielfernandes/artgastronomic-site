@@ -17,19 +17,19 @@ const Banner = () => (
                 <div className="col-sm-12 col-md-8 my-3">
                     <div className="float-right social-media-links">
                         <a className="btn link-media-social rounded-circle" href="https://instagram.com/chefsassyfnandes" target="_blank" rel="noreferrer noopener"> 
-                          <i className="fa fa-instagram" />
+                          <i className="fab fa-instagram-square"></i>
                           <span className="sr-only">
                             Instagram
                           </span>
                         </a>
                         <a className="btn link-media-social rounded-circle ml-1" href="https://facebook.com/chfsassy/" target="_blank" rel="noreferrer noopener"> 
-                          <i className="fa fa-facebook" />
+                          <i className="fab fa-facebook-square"></i>
                           <span className="sr-only">
                             Facebook
                           </span>
                         </a>
                         <a className="btn link-media-social rounded-circle ml-1" href="https://www.youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank" rel="noreferrer" noopener>
-                          <i className="fa fa-youtube" />
+                          <i className="fab fa-youtube-square"></i>
                           <span className="sr-only">
                             YouTube
                           </span>
