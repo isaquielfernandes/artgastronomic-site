@@ -3,6 +3,13 @@ const Footer = () => (
     <>
         {/* footer */}
         <footer className="footer-section mt-4">
+            <div >
+               <a className="btn btn-lg" href="https://be.contentful.com/login" target="_blank" rel="noreferrer noopener">
+                <span className="">
+                  Admin
+                </span>
+               </a>
+            </div>
             <a className="btn btn-lg" href="https://instagram.com/chefsassyfnandes" target="_blank" rel="noreferrer noopener">
                 <i className="fa fa-instagram" />
                 <span className="sr-only">
