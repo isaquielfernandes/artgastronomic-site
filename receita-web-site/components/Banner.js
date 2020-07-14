@@ -15,7 +15,7 @@ const Banner = () => (
                     </div>
                 </div>
                 <div className="col-sm-12 col-md-8 my-3">
-                    <div className="social-media-links">
+                    <div className="float-right social-media-links">
                         <a className="btn link-media-social rounded-circle" href="https://instagram.com/chefsassyfnandes" target="_blank" rel="noreferrer noopener"> 
                           <i className="fab fa-instagram"></i>
                           <span className="sr-only">
