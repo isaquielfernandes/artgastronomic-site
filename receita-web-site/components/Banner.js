@@ -35,7 +35,6 @@ const Banner = () => (
                           </span>
                         </a>
                     </div>
-                    <hr />
                 </div>
             </div>
         </div>
