@@ -14,9 +14,9 @@ const Banner = () => (
                        <a style={{color: '#0F0F0F'}} className="btn btn-danger p-button-danger p-button-raised text-uppercase" href="https://youtube.com/channel/UCybV8OZ7XZ9U30ESJ_r2UCg" target="_blank" rel="noreferrer noopener"><i className="mr-2 fa fa-youtube-play" />Inscreva-se</a>
                     </div>
                 </div>
-                <div className="col-sm-12 col-md-8 mt-3 mb-2">
-                    <div className="float-right social-media-links">
-                        <a className="btn link-media-social rounded-circle" href="https://instagram.com/chefsassyfnandes" target="_blank" rel="noreferrer noopener"> 
+                <div className="col-sm-12 col-md-8 mt-3 mb-1">
+                    <div className="d-flex justify-content-end social-media-links">
+                        <a className="btn link-media-social" href="https://instagram.com/chefsassyfnandes" target="_blank" rel="noreferrer noopener"> 
                           <i className="fab fa-instagram"></i>
                           <span className="sr-only">
                             Instagram
