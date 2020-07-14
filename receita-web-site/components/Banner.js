@@ -23,7 +23,7 @@ const Banner = () => (
                           </span>
                         </a>
                         <a className="btn link-media-social rounded-circle ml-1" href="https://facebook.com/chfsassy/" target="_blank" rel="noreferrer noopener"> 
-                          <i className="fab fa-facebook"></i>
+                          <i className="fa fa-facebook"></i>
                           <span className="sr-only">
                             Facebook
                           </span>
