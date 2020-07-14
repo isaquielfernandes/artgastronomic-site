@@ -12,7 +12,7 @@ const Navigation = () => {
     <header>
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
             <Link href="/">     
-                <a className="navbar-brand" style={{letterSpacing: '.7px'}}>
+                <a className="navbar-brand" style={{letterSpacing: '0px'}}>
                     <Logo/>
                     ArtGastronomic
                 </a>
