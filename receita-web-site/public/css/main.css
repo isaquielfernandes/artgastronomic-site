@@ -125,6 +125,12 @@ html, body {
   margin-top: 5.34rem;
 }
 
+.card-header img {
+   object-fit: cover;
+   height: 200px;
+   width: 100%;
+}
+
 /* outher section */
 .outher-img {
   max-height: 586px;
