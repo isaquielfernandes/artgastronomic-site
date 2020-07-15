@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from 'primereact/button';
 
 const Banner = () => (
-    <div className="social-media mt-0">
+    <div className="banner mt-0">
         <div className="container">
             <div className="row info-social jumbotron">
                 <div className="col-sm-12 col-md-4 col-lg-4">
