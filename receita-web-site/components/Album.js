@@ -41,6 +41,8 @@ const Album = () => (
                     </div>
                 </div>
             </div>
+        </div>
+        <div className="row">
             <Frases />
         </div>
     </div>
