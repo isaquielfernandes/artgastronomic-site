@@ -5,6 +5,7 @@ import { client } from '../../lib/api';
 import ErrorPage from 'next/error';
 import Container from '../../components/Container';
 import Date from '../../components/Data';
+import ReactMarkdown from 'react-markdown';
 
 import { motion } from "framer-motion";
 
@@ -61,8 +62,10 @@ const Receita = ( { receita } ) => {
                         />
                     </div>
                     <div className="col-12 mx-auto col-md-6 my-3 text-capitalize">
-                      <p className="lead">{p.fields.descricao}</p>
-                      
+                      {/*<p className="lead">{p.fields.descricao}</p>*/}
+                      <div className="mt-4">
+                         <ReactMarkdown source={p.fields.descricao} />
+                      </div> 
                       <div className="my-1 text-right" style={{color: '#4A4A4A'}}>
                           <hr/>
                           <Date dateString={p.sys.createdAt} />
