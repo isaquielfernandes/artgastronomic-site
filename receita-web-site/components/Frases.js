@@ -1,6 +1,6 @@
 
 const Frases = () => (
-    <div className="message col-md-4 offset-md-4 shadow-sm my-2 mx-auto">
+    <div className="message col-md-4 offset-md-4 justify-content-end shadow-sm my-2 mx-auto">
         <div className="message-body text-center py-2">
             <img src="img/logo/logotipo.jpg" className="img-fluid img-thumbnail mb-2" width={120} height={120} alt="logotipo chefsassyfnandes" />
             <p className="">"COZINHAR É COMO A VIDA.
