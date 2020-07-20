@@ -8,7 +8,6 @@ const Frases = () => (
                         O AMOR ACABA...A FOME NÃO."
                 <span className="">- Sassy Fernandes</span>
             </p>
-            
         </div>
     </div>
 );
