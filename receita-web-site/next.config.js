@@ -38,11 +38,11 @@ module.exports = {
             }),{} 
         );
 
-        const pages = {
+        const home = {
            '/': { page: '/' },
         };
 
-        return Object.assign({}, pages, insights);
+        return Object.assign({}, home, insights);
    }
 }
 
