@@ -1,12 +1,11 @@
-/*global google*/
-import React, { useState, useEffect, useRef } from 'react';
-import {Link} from 'next/link';
-import {GMap} from 'primereact/gmap';
-import {Dialog} from 'primereact/dialog';
-import {InputText} from 'primereact/inputtext';
-import {Button} from 'primereact/button';
-import {Checkbox} from 'primereact/checkbox';
-import {Growl} from 'primereact/growl';
+import React, { useState, useRef } from 'react';
+import { Link } from 'next/link';
+import { GMap } from 'primereact/gmap';
+import { Dialog } from 'primereact/dialog';
+import { InputText } from 'primereact/inputtext';
+import { Button } from 'primereact/button';
+import { Checkbox } from 'primereact/checkbox';
+import { Growl } from 'primereact/growl';
 import Head from 'next/head';
 
 const GoogleMaps = () => { 
@@ -40,7 +39,7 @@ const GoogleMaps = () => {
 
         if(isMarker) {
             let title = event.overlay.getTitle();
-            infoWindow = infoWindow||new GMap.maps.InfoWindow();
+            let infoWindow = infoWindow||new GMap.maps.InfoWindow();
             infoWindow.setContent('<div>' + title + '</div>');
             infoWindow.open(event.map, event.overlay);
             event.map.setCenter(event.overlay.getPosition());
