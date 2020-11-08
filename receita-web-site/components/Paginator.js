@@ -1,4 +1,4 @@
-import React, { FunctionComponent, Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 
 const Paginator = ( { skip, range, handlePaginationChange }) => {
   skip = !!skip ? skip : 0;
