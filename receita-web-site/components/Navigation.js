@@ -1,12 +1,8 @@
 import Link from "next/link"; 
 import Logo from "./Logo";
-import React, { useState } from 'react';
-import {Sidebar} from "primereact/sidebar";
-import {Button} from 'primereact/button';
-
+import React from 'react';
 
 const Navigation = () => {
-  const [visible, setVisible] = useState(false);
 
   return(
     <header>
